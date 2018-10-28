@@ -2,15 +2,15 @@
 title: 'fslong的炒股笔记'
 description: 'fslong的炒股笔记'
 keyword: 'fslong,炒股笔记，jekyll,H2O Theme For Jekyll'
-url: '' # your host
+url: 'https://fslong520.github.io/stock/' # your host
 
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
 
 # Navigation links
 nav:
-  home: '/'
-  tags: '/tags.html'
+  home: '/stock/'
+  tags: '/stock//tags.html'
 
 # Footer
 footer:
@@ -51,7 +51,7 @@ postPatterns: 'circuitBoard'
 sns:
   weibo: '//weibo.com/fslong'
   github: '//github.com/fslong520'
-  
+
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
