@@ -9,7 +9,7 @@ baseurl: '/stock'
 
 # Navigation links
 nav:
-  home: '/stock'
+  home: '/stock/'
   tags: '/stock/tags.html'
 
 # Footer
