@@ -2,15 +2,15 @@
 title: 'fslong的炒股笔记'
 description: 'fslong的炒股笔记'
 keyword: 'fslong,炒股笔记，jekyll,H2O Theme For Jekyll'
-url: 'https://fslong520.github.io/stock/' # your host
+url: '/stock' # your host
 
 # if you don't need baseurl, you should leave this value blank.
-baseurl: ''
+baseurl: '/stock'
 
 # Navigation links
 nav:
   home: '/stock/'
-  tags: '/stock//tags.html'
+  tags: '/stock/tags.html'
 
 # Footer
 footer:
