@@ -1,7 +1,7 @@
 # Site settings 配置站点
-title: 'fslong的炒股笔记'
-description: 'fslong的炒股笔记'
-keyword: 'fslong,炒股笔记，jekyll,H2O Theme For Jekyll'
+title: 'fslong的个人博客'
+description: 'fslong的个人博客'
+keyword: 'fslong,炒股笔记,个人博客,jekyll,H2O Theme For Jekyll'
 url: 'https://fslong520.github.io/blog' # your host
 
 # if you don't need baseurl, you should leave this value blank.
