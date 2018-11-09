@@ -3,139 +3,19 @@
     {
       "title"    : "炒股笔记01——盘中买卖需看好主力手法",
       "tags"     : "炒股笔记",
-      "url"      : "/stock//2018/11/09/%E7%82%92%E8%82%A1%E7%AC%94%E8%AE%B001-%E7%9B%98%E4%B8%AD%E4%B9%B0%E5%8D%96%E9%9C%80%E7%9C%8B%E5%A5%BD%E4%B8%BB%E5%8A%9B%E6%89%8B%E6%B3%95.html"
+      "url"      : "/blog//2018/11/09/%E7%82%92%E8%82%A1%E7%AC%94%E8%AE%B001-%E7%9B%98%E4%B8%AD%E4%B9%B0%E5%8D%96%E9%9C%80%E7%9C%8B%E5%A5%BD%E4%B8%BB%E5%8A%9B%E6%89%8B%E6%B3%95.html"
     } ,
   
     {
       "title"    : "解读习主席在《民营企业座谈会》上讲话",
       "tags"     : "经济",
-      "url"      : "/stock//2018/11/02/%E8%A7%A3%E8%AF%BB%E4%B9%A0%E4%B8%BB%E5%B8%AD%E8%AE%B2%E8%AF%9D-%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E5%BA%A7%E8%B0%88%E4%BC%9A.html"
-    } ,
-  
-    {
-      "title"    : "17-基于深度学习的量化投资学习笔记（二）",
-      "tags"     : "深度学习 量化交易策略",
-      "url"      : "/stock//2018/10/02/17-%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80.html"
-    } ,
-  
-    {
-      "title"    : "17-基于深度学习的量化投资学习笔记（一）",
-      "tags"     : "深度学习 量化交易策略",
-      "url"      : "/stock//2018/10/02/18-%E5%9F%BA%E4%BA%8E%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%B8%80.html"
-    } ,
-  
-    {
-      "title"    : "16-别哈市书",
-      "tags"     : "哈尔滨 离职",
-      "url"      : "/stock//2018/09/08/16-%E5%88%AB%E5%93%88%E5%B8%82%E4%B9%A6.html"
-    } ,
-  
-    {
-      "title"    : "15-滴滴事件的思考",
-      "tags"     : "滴滴 人性 资本",
-      "url"      : "/stock//2018/08/26/15-%E6%BB%B4%E6%BB%B4%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%80%9D%E8%80%83.html"
-    } ,
-  
-    {
-      "title"    : "14-Python多进程、多线程等对比实验",
-      "tags"     : "Python Linux Windows10",
-      "url"      : "/stock//2018/08/14/14-Python%E5%A4%9A%E8%BF%9B%E7%A8%8B-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%AD%89%E5%AF%B9%E6%AF%94.html"
-    } ,
-  
-    {
-      "title"    : "01-每日壁纸接口文档",
-      "tags"     : "Python Json API",
-      "url"      : "/stock//2018/08/10/12-%E6%AF%8F%E6%97%A5%E5%A3%81%E7%BA%B8%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3.html"
-    } ,
-  
-    {
-      "title"    : "11-Debian9安装MariaDB(MySQL)及其配置",
-      "tags"     : "Python Linux Windows10",
-      "url"      : "/stock//2018/07/12/11-Debian9%E5%AE%89%E8%A3%85MariaDB(MySQL)%E5%8F%8A%E5%85%B6%E9%85%8D%E7%BD%AE.html"
-    } ,
-  
-    {
-      "title"    : "10-从中国天气网获取天气数据",
-      "tags"     : "Python",
-      "url"      : "/stock//2018/06/24/10-%E4%BB%8E%E4%B8%AD%E5%9B%BD%E5%A4%A9%E6%B0%94%E7%BD%91%E8%8E%B7%E5%8F%96%E5%A4%A9%E6%B0%94%E6%95%B0%E6%8D%AE.html"
-    } ,
-  
-    {
-      "title"    : "09-Windows10下的Django WebAPP开发环境搭建",
-      "tags"     : "Python Coding.net Linux Windows10",
-      "url"      : "/stock//2018/05/31/09-Windows10%E4%B8%8B%E7%9A%84Django-WebAPP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA.html"
-    } ,
-  
-    {
-      "title"    : "08-使用Python编写的电子邮件客户端",
-      "tags"     : "Python Email",
-      "url"      : "/stock//2018/04/23/08-EmailApplication.html"
-    } ,
-  
-    {
-      "title"    : "07-使用Python的Pillow模块生成验证码",
-      "tags"     : "identifyingCode Python Pillow",
-      "url"      : "/stock//2018/04/13/07-IdentifyingCode.html"
-    } ,
-  
-    {
-      "title"    : "06-我的第一只Spider",
-      "tags"     : "Python html Spider",
-      "url"      : "/stock//2018/04/12/06-FirstSpider.html"
-    } ,
-  
-    {
-      "title"    : "05-通过解析XML获取Bing每日美图并保存到本地",
-      "tags"     : "Python XML Bing美图",
-      "url"      : "/stock//2018/04/12/05-Bingpicture_2.html"
-    } ,
-  
-    {
-      "title"    : "04-获取Bing每日美图并保存到本地",
-      "tags"     : "Python Json Bing美图",
-      "url"      : "/stock//2018/04/09/04-BingPicture.html"
-    } ,
-  
-    {
-      "title"    : "03-删除顽固文件方法之借尸还魂",
-      "tags"     : "Win10 删除 顽固文件",
-      "url"      : "/stock//2018/04/07/03-DeleteFiles.html"
-    } ,
-  
-    {
-      "title"    : "02-使用Hexo和Coding.net的WebIDE搭建个人博客",
-      "tags"     : "Hexo Coding.net 博客",
-      "url"      : "/stock//2018/04/06/02-ContributeBlog.html"
-    } ,
-  
-    {
-      "title"    : "01-Windows10 Linux子系统安装图形化界面的两种方法及其对比",
-      "tags"     : "linux Win10 bash GUI",
-      "url"      : "/stock//2018/04/05/01-InstallGuiForWin10Bash.html"
-    } ,
-  
-    {
-      "title"    : "记录一个坑2018.4.2",
-      "tags"     : "Hexo",
-      "url"      : "/stock//2018/04/03/%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%AA%E5%9D%912018-4-2.html"
-    } ,
-  
-    {
-      "title"    : "Welcome",
-      "tags"     : "杂谈",
-      "url"      : "/stock//2018/04/03/Welcome.html"
-    } ,
-  
-    {
-      "title"    : "Hello World",
-      "tags"     : "杂谈",
-      "url"      : "/stock//2018/04/02/hello-world.html"
+      "url"      : "/blog//2018/11/02/%E8%A7%A3%E8%AF%BB%E4%B9%A0%E4%B8%BB%E5%B8%AD%E8%AE%B2%E8%AF%9D-%E6%B0%91%E8%90%A5%E4%BC%81%E4%B8%9A%E5%BA%A7%E8%B0%88%E4%BC%9A.html"
     } ,
   
     {
       "title"    : "Hello Jekyll",
       "tags"     : "jekyll",
-      "url"      : "/stock//2017/04/18/hello-jekyll.html"
+      "url"      : "/blog//2017/04/18/hello-jekyll.html"
     } 
   
 ]
