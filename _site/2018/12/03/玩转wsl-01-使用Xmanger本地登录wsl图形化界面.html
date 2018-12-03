@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>玩转wsl-01-使用Xmanger本地登录wsl图形化界面 - fslong的个人博客</title>
+    <meta name="author"  content="fslong">
+    <meta name="description" content="玩转wsl-01-使用Xmanger本地登录wsl图形化界面">
+    <meta name="keywords"  content="wsl">
+    <!-- Open Graph -->
+    <meta property="og:title" content="玩转wsl-01-使用Xmanger本地登录wsl图形化界面 - fslong的个人博客">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://localhost:4000/2018/12/03/%E7%8E%A9%E8%BD%ACwsl-01-%E4%BD%BF%E7%94%A8Xmanger%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%95wsl%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2.html">
+    <meta property="og:description" content="fslong的个人博客">
+    <meta property="og:site_name" content="fslong的个人博客">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/blog/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/blog/assets/css/prism.css">
+    <link rel="stylesheet" href="/blog/assets/css/share.min.css">
+    <link rel="stylesheet" href="/blog/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/blog/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/blog/">home</a></li>
+            
+            <li><a href="/blog/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-default "
+    data-theme="default"
+  >
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+          
+            <a href="http://localhost:4000/blog/tags#wsl" class="post-tag">wsl</a>
+          
+        
+      </div>
+      <h1>玩转wsl-01-使用Xmanger本地登录wsl图形化界面</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i class="iconfont icon-author"></i>fslong</span>
+        <time class="post-meta-item" datetime="18-12-03"><i class="iconfont icon-date"></i>03 Dec 2018</time>
+      </div>
+    </div>
+    
+    <div class="filter"></div>
+      <div class="post-cover" style="background: url('https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-01.jpg') center no-repeat; background-size: cover;"></div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <p>  <em>“不积跬步无以至千里，不积小流无以成江海”，这个系列是我在玩wsl的时候写的一些东西。</em></p>
+
+<hr />
+<p>  关于wsl如果看过之前笔者写的东西，大家一定不会陌生，就是Windows10下面的一个Linux子系统，本人一般玩的都是Debian Linux。默认就跟服务器版本一样，只有最基础的东西，但某些特殊用途，还是需要图形化界面来展现的，在之前笔者介绍的是用Xming来开启Linux子系统图形化界面，而今天笔者要跟大家分享的是使用Xmanger来实现同样的功能。简单提一句，Xmanger也是Xwindows的实现方式之一，他是商业软件，而Xming是开源软件，个人实测Xmanger图形界面性能要好过Xming一些，其他关于Xmanger的内容大家自行了解便好，笔者也不是特别了解。</p>
+<h2 id="一在windows10下安装debian-linux子系统">一、在Windows10下安装Debian Linux子系统</h2>
+<p>  详情请查看网络上相关内容或者我的个人博客，十分简单，这不是今天的重点，在此就不再赘述。</p>
+<h2 id="二下载安装xmanager">二、下载安装Xmanager</h2>
+<p>  Xmanager是一个商业收费软件，可以下载试用，地址是：<a href="http://www.xshellcn.com/xiazai.html">http://www.xshellcn.com/xiazai.html</a>，申请界面如下图： 
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-02.jpg" alt="" /><br />
+  安装十分简单，双击安装包，然后一路下一步就是了，具体动图如下：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-gif-01.gif" alt="" /><br />
+  安装好了之后打开Xmanager备用即可。</p>
+<h2 id="三debian-linux子系统的配置">三、Debian Linux子系统的配置</h2>
+<p>  这里使用的是ssh链接，就用默认的22端口即可，具体步骤如下：<br />
+1、安装openssh，代码：<code class="highlighter-rouge">sudo apt install openssh-server</code>，笔者这是已经安装好的，如下图：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-09.jpg" alt="" /><br />
+2、彻底重启ssh服务，代码<code class="highlighter-rouge">sudo service ssh --full-restart</code>，如下图：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-10.jpg" alt="" /><br />
+3、安装xfce4桌面，代码:<code class="highlighter-rouge">sudo apt install xfce4</code>，这一步会消耗一定时间，请耐心等待，笔者安装时候没有截图，卸载截图也太麻烦，这个比较简单，就不放图了。<br />
+  此时ssh服务已经启动，Xfce4桌面也已安装完毕，如果想更换端口或者用户名什么的，请查看ssh相关内容，这里也不再叙述。</p>
+<h2 id="四新建xstart并连接linux子系统">四、新建Xstart并连接Linux子系统</h2>
+<p>  Xstart可以使用ssh登录Linux并执行一段命令，于是笔者猜想是不是也能同Xming一样执行<code class="highlighter-rouge">startx</code>命令呢？于是开始实践：</p>
+<ol>
+  <li>点击主界面的工具，选择Xstart，命名为Debian；</li>
+  <li>协议选择ssh，主机填入127.0.0.1，用户名使用wsl的用户名，验证选择password（建议点击password旁边的设置，进去之后填入密码并保存，免得每次都输入密码）;</li>
+  <li>命令填入<code class="highlighter-rouge">startxfce4</code>;</li>
+  <li>点击保存，然后点击运行，如果前面没有保存密码，这里会提示输入密码；</li>
+  <li>如果第一次运行xfce4桌面，会问你使用什么样的用户配置，选择default就是了；</li>
+  <li>笔者安装了中文字体，安装了xfce4-terminal之后做了简单配置如下图：</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-01.jpg" alt="" /></p>
+
+<p>  整个过程动图如下：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-gif-02.gif" alt="" /></p>
+
+<p>  至此，今天的内容主体就完成了，Ubuntu等其他wsl理论上也可以使用同样的方法启动图形化界面，有几点需要说下：</p>
+<ol>
+  <li>Xstart开始之前，必须确保Linux子系统的ssh服务开启，可以设置开机自启；</li>
+  <li>相比于Xming，使用本文中的方法不用终端一直处于开启状态，只要Linux子系统的ssh服务在后台运行，就可以链接；</li>
+  <li>相比于Xming，这种方法的图形性能要好些，以前用Xming的时候有时候会遇到卡顿的情况；</li>
+  <li>如果你有云服务器，也可以安装一个图形化界面，使用相同的方法链接，只不过主机部分就得填写你的服务器的地址；</li>
+  <li>Xmanger属性里有很多设置，比如窗口模式什么的，大家可以自行摸索下。</li>
+</ol>
+
+<hr />
+
+<blockquote>
+  <p><strong>声明：</strong>
+微信公众平台对于markdown支持不够友好，建议阅读原文。</p>
+</blockquote>
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="https://tva1.sinaimg.cn/crop.318.608.1137.1137.180/3c1b9c69jw8f1ptze8k4hj21kw1ekakh.jpg" alt="">
+      </div>
+      <div class="author-name" rel="author">fslong</div>
+      <div class="bio">
+        <p>在家猫着的小伙伴</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//weibo.com/fslong" target="_blank">
+                    <i class="iconfont icon-weibo"></i>
+                </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/fslong520" target="_blank">
+                    <i class="iconfont icon-github"></i>
+                </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+
+      
+      <div class="read-next-item">
+        <a href="/2018/12/03/%E5%A4%9C%E8%AF%AD17-%E8%B8%A9%E5%9D%91-%E9%9B%86%E5%90%88%E7%AB%9E%E4%BB%B7%E6%97%B6%E5%80%99%E8%A6%81%E6%85%8E%E9%87%8D.html" class="read-next-link"></a>
+          <section>
+            <span>2018-12-03-夜语17——踩坑，集合竞价时候要慎重</span>
+            <p>  “不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。</p>
+          </section>
+          
+          <div class="filter"></div>
+          <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/资产/资产2018-12-03.jpg" alt="">
+          
+      </div>
+      
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>fslong的个人博客 ©
+  
+  
+    2017
+    -
+  
+  2018
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>
+</footer>
+
+
+  <script src="/blog/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+
+  <script src="/blog/assets/js/prism.js"></script>
+  <script src="/blog/assets/js/index.min.js"></script>
+</body>
+
+</html>

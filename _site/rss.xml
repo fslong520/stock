@@ -5,9 +5,149 @@
     <description>fslong的个人博客</description>
     <link>http://localhost:4000/blog/</link>
     <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 01 Dec 2018 20:14:52 +0800</pubDate>
-    <lastBuildDate>Sat, 01 Dec 2018 20:14:52 +0800</lastBuildDate>
+    <pubDate>Mon, 03 Dec 2018 20:18:39 +0800</pubDate>
+    <lastBuildDate>Mon, 03 Dec 2018 20:18:39 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>玩转wsl-01-使用Xmanger本地登录wsl图形化界面</title>
+        <description>&lt;p&gt;  &lt;em&gt;“不积跬步无以至千里，不积小流无以成江海”，这个系列是我在玩wsl的时候写的一些东西。&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;  关于wsl如果看过之前笔者写的东西，大家一定不会陌生，就是Windows10下面的一个Linux子系统，本人一般玩的都是Debian Linux。默认就跟服务器版本一样，只有最基础的东西，但某些特殊用途，还是需要图形化界面来展现的，在之前笔者介绍的是用Xming来开启Linux子系统图形化界面，而今天笔者要跟大家分享的是使用Xmanger来实现同样的功能。简单提一句，Xmanger也是Xwindows的实现方式之一，他是商业软件，而Xming是开源软件，个人实测Xmanger图形界面性能要好过Xming一些，其他关于Xmanger的内容大家自行了解便好，笔者也不是特别了解。&lt;/p&gt;
+&lt;h2 id=&quot;一在windows10下安装debian-linux子系统&quot;&gt;一、在Windows10下安装Debian Linux子系统&lt;/h2&gt;
+&lt;p&gt;  详情请查看网络上相关内容或者我的个人博客，十分简单，这不是今天的重点，在此就不再赘述。&lt;/p&gt;
+&lt;h2 id=&quot;二下载安装xmanager&quot;&gt;二、下载安装Xmanager&lt;/h2&gt;
+&lt;p&gt;  Xmanager是一个商业收费软件，可以下载试用，地址是：&lt;a href=&quot;http://www.xshellcn.com/xiazai.html&quot;&gt;http://www.xshellcn.com/xiazai.html&lt;/a&gt;，申请界面如下图： 
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-02.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+  安装十分简单，双击安装包，然后一路下一步就是了，具体动图如下：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-gif-01.gif&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+  安装好了之后打开Xmanager备用即可。&lt;/p&gt;
+&lt;h2 id=&quot;三debian-linux子系统的配置&quot;&gt;三、Debian Linux子系统的配置&lt;/h2&gt;
+&lt;p&gt;  这里使用的是ssh链接，就用默认的22端口即可，具体步骤如下：&lt;br /&gt;
+1、安装openssh，代码：&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt install openssh-server&lt;/code&gt;，笔者这是已经安装好的，如下图：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-09.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+2、彻底重启ssh服务，代码&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo service ssh --full-restart&lt;/code&gt;，如下图：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+3、安装xfce4桌面，代码:&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo apt install xfce4&lt;/code&gt;，这一步会消耗一定时间，请耐心等待，笔者安装时候没有截图，卸载截图也太麻烦，这个比较简单，就不放图了。&lt;br /&gt;
+  此时ssh服务已经启动，Xfce4桌面也已安装完毕，如果想更换端口或者用户名什么的，请查看ssh相关内容，这里也不再叙述。&lt;/p&gt;
+&lt;h2 id=&quot;四新建xstart并连接linux子系统&quot;&gt;四、新建Xstart并连接Linux子系统&lt;/h2&gt;
+&lt;p&gt;  Xstart可以使用ssh登录Linux并执行一段命令，于是笔者猜想是不是也能同Xming一样执行&lt;code class=&quot;highlighter-rouge&quot;&gt;startx&lt;/code&gt;命令呢？于是开始实践：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;点击主界面的工具，选择Xstart，命名为Debian；&lt;/li&gt;
+  &lt;li&gt;协议选择ssh，主机填入127.0.0.1，用户名使用wsl的用户名，验证选择password（建议点击password旁边的设置，进去之后填入密码并保存，免得每次都输入密码）;&lt;/li&gt;
+  &lt;li&gt;命令填入&lt;code class=&quot;highlighter-rouge&quot;&gt;startxfce4&lt;/code&gt;;&lt;/li&gt;
+  &lt;li&gt;点击保存，然后点击运行，如果前面没有保存密码，这里会提示输入密码；&lt;/li&gt;
+  &lt;li&gt;如果第一次运行xfce4桌面，会问你使用什么样的用户配置，选择default就是了；&lt;/li&gt;
+  &lt;li&gt;笔者安装了中文字体，安装了xfce4-terminal之后做了简单配置如下图：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-01.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  整个过程动图如下：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-gif-02.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  至此，今天的内容主体就完成了，Ubuntu等其他wsl理论上也可以使用同样的方法启动图形化界面，有几点需要说下：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Xstart开始之前，必须确保Linux子系统的ssh服务开启，可以设置开机自启；&lt;/li&gt;
+  &lt;li&gt;相比于Xming，使用本文中的方法不用终端一直处于开启状态，只要Linux子系统的ssh服务在后台运行，就可以链接；&lt;/li&gt;
+  &lt;li&gt;相比于Xming，这种方法的图形性能要好些，以前用Xming的时候有时候会遇到卡顿的情况；&lt;/li&gt;
+  &lt;li&gt;如果你有云服务器，也可以安装一个图形化界面，使用相同的方法链接，只不过主机部分就得填写你的服务器的地址；&lt;/li&gt;
+  &lt;li&gt;Xmanger属性里有很多设置，比如窗口模式什么的，大家可以自行摸索下。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;
+微信公众平台对于markdown支持不够友好，建议阅读原文。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 03 Dec 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/blog/2018/12/03/%E7%8E%A9%E8%BD%ACwsl-01-%E4%BD%BF%E7%94%A8Xmanger%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%95wsl%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/12/03/%E7%8E%A9%E8%BD%ACwsl-01-%E4%BD%BF%E7%94%A8Xmanger%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%95wsl%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2.html</guid>
+        
+        <category>wsl</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>2018-12-03-夜语17——踩坑，集合竞价时候要慎重</title>
+        <description>&lt;p&gt;  &lt;em&gt;“不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;一美味的瓜&quot;&gt;&lt;strong&gt;一、美味的瓜&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;  今天踩了一个坑，在分析的地方细说。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（一）、先讲政治：&lt;/strong&gt;  &lt;br /&gt;
+【12月3日新闻联播汇总】&lt;br /&gt;
+1、习近平出席阿根廷总统举行的欢迎仪式。&lt;br /&gt;
+2、习近平抵达巴拿马城，开始对巴拿马共和国进行国事访问。&lt;br /&gt;
+3、李克强在部分省（区）政府主要负责人经济形势座谈会上强调，坚定信心，真抓实干，增强中国经济发展动力和后劲。&lt;br /&gt;
+4、栗战书与土耳其大国民议会会议长举行会谈。&lt;br /&gt;
+5、气候大会聚焦《巴黎协定》实施细则。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;（二）、再讲其他：&lt;/strong&gt;&lt;br /&gt;
+1、一大波利好，不知道从何说起；&lt;br /&gt;
+2、离岸人民币兑美元收复6.88关口，日内涨近700点；&lt;font color=&quot;red&quot;&gt;说好的破7呢？看来是很难了&lt;/font&gt; &lt;br /&gt;
+3、北上资金今日大幅买入白马股，其中沪股通净买入中国平安11.6亿元、贵州茅台逾10亿元，深股通净买入海康威视近6亿元、五粮液近4亿元。&lt;font color=&quot;red&quot;&gt;大佬们开始干活了，警惕他们获利出逃带来的大盘下跌。&lt;/font&gt;&lt;br /&gt;
+4、【广州11月一手楼与二手楼成交面积同比均大降】11月份广州一手住宅成交面积同比去年下降近四成，二手住宅成交面积同比下降超过五成。广州市房地产中介协会分析，出现大降的主要原因是，广州市11月1日起开始启用存量房网上交易管理系统新增功能，该功能主要是加强对房地产中介机构促成的交易的管理，而中介机构还没有适应新的规则。&lt;font color=&quot;red&quot;&gt;呵呵。&lt;/font&gt;&lt;br /&gt;
+5、&lt;font color=&quot;red&quot;&gt;董小姐已经在说赢了雷军了，其实这个就是两个小伙伴之间的玩耍，没得事的，这种良性的赌我觉得挺好的。&lt;/font&gt;&lt;/p&gt;
+&lt;h2 id=&quot;二今日实盘操作&quot;&gt;&lt;strong&gt;二、今日实盘操作&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;一操作&quot;&gt;&lt;strong&gt;（一）、操作&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;把格力的仓位补起来（蹭一下这波行情）；&lt;/li&gt;
+  &lt;li&gt;在关键时刻补仓，整体今日涨了1048，大伙看看截图吧：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/资产/资产2018-12-03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;二分析&quot;&gt;&lt;strong&gt;（二）、分析&lt;/strong&gt;&lt;/h3&gt;
+
+&lt;p&gt;  先引用一个简评：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;【12月3日A股收评：12月迎来开门大涨，汽车销售、期货板块全线暴涨】&lt;br /&gt;
+1、3日，受周末消息影响，两市大幅高开，指数略微下探后回升，市场成交量迅速放大，此后指数稳步走高，资金承接力度不错，板块全线飘红，午后三大指数依旧横盘震荡为主，多空双方在此位置对峙，增量资金跑步入场，盘面上看，午后汽车零部件和汽车销售板块异军突起，成为领涨先锋，但此后指数逐渐回落，临近尾盘，指数横盘震荡。截止收盘沪指涨2.57，深成指涨3.34%，创业板指涨3.26%。&lt;br /&gt;
+2、板块概念方面，汽车销售、量子通信板块领涨，养鸡板块领跌。&lt;br /&gt;
+3、两市共3487只个股上涨，93只个股涨停，除新股外涨停89只，43只个股下跌，1只个股跌停，29只股票炸板，炸板率26%。&lt;br /&gt;
+4、沪股通今日流入89.0亿，深股通流入37.2亿。&lt;br /&gt;
+来自选股宝打板神器（http://xuangubao.cn/ban/1）&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;  关于大盘的分析，铺天盖地的一大堆。我就一个问题，毛衣战暂停的利好真的能支撑起大盘一天内涨这么多，直接上牛市？明显不现实，今天涨这么多，要么就是有关大佬真的对这种半死不活的大盘不忍了，让国家队大肆出手（回头想办法查查资金流量），要么就是投机者的虚假繁荣，不管哪种情况其实都不利于后市的发展，并不是很看好未来的走势，&lt;strong&gt;只有这个市场大部分主力转换思路不再是挣快钱，对于中国后续实体经济的发展才会有很大的帮助，而后续实体经济的发展又会反哺股市，这样才会形成良性循环，如果依然都是投机客，那么这只是一两日的虚假繁荣&lt;/strong&gt;。&lt;br /&gt;
+  讲讲今天踩了一个坑：&lt;strong&gt;集合竞价时间段不允许撤单！&lt;/strong&gt; 比较好奇为啥上周五我明明点了撤单还成交了，今天在集合竞价阶段测试了下（测试一手便宜股票就得了呗，干嘛买3手格力，秀逗了），然后点了下撤单才看清楚：&lt;strong&gt;&lt;font color=&quot;red&quot;&gt;当前交易时间不允许撤单！&lt;/font&gt;&lt;/strong&gt;，然后就成交了，然后就泪崩。后来问了下小伙伴，上午集合竞价是9:20到9:25之间不允许撤单，下午集合竞价是直接不允许撤单，我们集合竞价的时候一定要慎重的呀。后来我思索了下，索性就做一次超短线投机一把，又补了格力。分析思路是这样的：&lt;strong&gt;格力已经横盘很久了，而且最近负面消息很多都消化的差不多了，并且最近格力造芯片这事其实是利好的，今天主力一大早先拉一下，然后再六万多手砸一下，这量简直是太吓人了，明显是想把散户都洗出去，结合最近主力有好多天没动静了，今天这个环节这样子玩一下，那么机会来了的感觉，所以蹭一波东风，收盘时收益感觉还不错，明天把今天加的仓清掉。实事求是的讲，现在格力的股价依然是比较便宜的。&lt;/strong&gt; 仔细分析了下，如果上周五没卖出去的话，今天能多赚1个点的样子，但比起相应的风险，我觉得少赚1个点也值了，最后看下板块情况：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/板块/资金流入流出2018-12-03.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;三操作预期&quot;&gt;&lt;strong&gt;三、操作预期&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;G20峰会风向跟结果虽然是好的，但今天拉的太狠，真的不利于后世发展，做一个超短线，再次把仓位减下来；&lt;/li&gt;
+  &lt;li&gt;杜绝“富贵险中求”、“老夫就是一梭子”等二货思想，不要天天想着骚操作赚钱；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;四穷查理宝典阅读笔记&quot;&gt;&lt;strong&gt;四、《穷查理宝典》阅读笔记&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Beta系数、现代组合投资理论等等——这些在我看来都没什么道理。我们想要做到的是，用低廉的价格，甚至是合理的价格，来购买那些拥有可持续竞争优势的企业。&lt;/li&gt;
+  &lt;li&gt;我们尤其害怕那些大量举债的金融机构。如果他们开始说起风险管理有多么好，我们就会很紧张。&lt;font color=&quot;red&quot;&gt;那些金融衍生品，我们不陌生吧，很多实体经济就是被他们搞垮的&lt;/font&gt;&lt;/li&gt;
+  &lt;li&gt;人们不去考虑后果的后果：人们开始只想对冲利率变化带来的风险，这是非常困难和复杂的事情。然后呢，对冲操作导致了（公布的盈利）波动。所以他们用新的衍生品来抹平。这个时候你就不得不说谎了。这就变成了“疯帽匠的茶话会”。那些庞大的、复杂的公司会出现这种情况。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;
+微信公众平台对于markdown支持不够友好，建议阅读原文，另外本文是本人操作的实证与笔记，希望对你有用，如果由于我写的东西导致你判断失误，遭受了亏损，我只能说声抱歉，投资这种事情还是需要我们自己有主见。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 03 Dec 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/blog/2018/12/03/%E5%A4%9C%E8%AF%AD17-%E8%B8%A9%E5%9D%91-%E9%9B%86%E5%90%88%E7%AB%9E%E4%BB%B7%E6%97%B6%E5%80%99%E8%A6%81%E6%85%8E%E9%87%8D.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/2018/12/03/%E5%A4%9C%E8%AF%AD17-%E8%B8%A9%E5%9D%91-%E9%9B%86%E5%90%88%E7%AB%9E%E4%BB%B7%E6%97%B6%E5%80%99%E8%A6%81%E6%85%8E%E9%87%8D.html</guid>
+        
+        <category>炒股笔记</category>
+        
+        
+      </item>
     
       <item>
         <title>2018-12-01-夜语16——国家队的出手</title>
@@ -82,7 +222,7 @@
 &lt;/ol&gt;
 
 &lt;h2 id=&quot;四穷查理宝典阅读笔记&quot;&gt;&lt;strong&gt;四、《穷查理宝典》阅读笔记&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;  今天休息哈，不看书了。&lt;/p&gt;
+&lt;p&gt;  今天玩了玩wsl，使用xmanager本地登录了wsl并且安装了图形界面，相关东西我明天会去做一个教程发出来，没有看《穷查理宝典》。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -661,193 +801,6 @@
         <pubDate>Wed, 21 Nov 2018 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/blog/2018/11/21/%E5%A4%9C%E8%AF%AD09-%E8%B5%B5%E8%96%87%E8%A2%AB%E7%82%B9%E5%90%8D.html</link>
         <guid isPermaLink="true">http://localhost:4000/blog/2018/11/21/%E5%A4%9C%E8%AF%AD09-%E8%B5%B5%E8%96%87%E8%A2%AB%E7%82%B9%E5%90%8D.html</guid>
-        
-        <category>炒股笔记</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>2018-11-20-夜语08——乌鸦嘴成真</title>
-        <description>&lt;p&gt;  &lt;em&gt;“不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h1 id=&quot;一美味的瓜&quot;&gt;&lt;strong&gt;一、美味的瓜&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;（一）、先讲政治：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;【11月20日新闻联播汇总】&lt;br /&gt;
-1、习近平抵达马尼拉，开始对菲律宾共和国进行国事访问。&lt;br /&gt;
-2、习近平同巴勒斯坦总统就中巴建交30周年互致贺电。&lt;br /&gt;
-3、国务院举行宪法宣誓仪式，李克强总理监誓。&lt;br /&gt;
-4、韩正会见法国国务部长兼生态转型与团结部长。&lt;br /&gt;
-5、京张高铁清华园隧道贯通。&lt;br /&gt;
-6、“土耳其溪”天然气管道海底工程竣工。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（二）、再讲其他：&lt;/strong&gt;&lt;br /&gt;
-1、美国商务部19日出台了一份或是历来最严格的技术出口管制先期通知，并就这一框架方案向公众征询意见。考虑进行管制的类别中包括了人工智能、芯片、量子计算、机器人、面印和声纹技术等等被认为涉及国家安全和高技术的前沿科技的关键领域。&lt;font color=&quot;red&quot;&gt;那些骗经费的说是自主国产的芯片，怕是要被拆穿了。&lt;/font&gt;&lt;br /&gt;
-2、东哥的事情好像有点大，推特上有消息如下：&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.11.20/mmexport1542690334554.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-3、俞敏洪、蒋劲夫的瓜都还没过去，所以说谨言慎行是多么重要的哇。而且这两件事都应了夫子的话，具体什么话请自行脑补；&lt;br /&gt;
-4、安利一下德林社，蛮有趣的，放张官微上的图感受下：&lt;br /&gt;
-&lt;img src=&quot;https://wx1.sinaimg.cn/mw690/005NbWZqly1fxdfyl9wrrj30u0140e81.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-5、深交所对任子行发关注函：要求说明互动平台披露事项是否存在迎合市场热点、炒作股价情形。任子行19日在互动易平台称，公司投资设立四个产业并购基金投资了京东金融、北森云、宝宝树、猎聘网等项目，不排除未来登上科创板的可能性。深交所20日晚下发关注函，要求其逐项说明参与投资四个产业并购基金时履行信息披露义务的情况。并购基金的损益分配情况对公司最近两年的财务影响，对2018年度及未来是否会产生重大财务影响。在互动易平台上披露该信息的目的和动机，是否存在主动迎合市场热点、炒作公司股价的情形。&lt;font color=&quot;red&quot;&gt;言多必失呀，炒作股价的动机肯定是有的。我昨天才说游资这样子炒作有问题的，这就开始问了，估计很快又有新的瓜。&lt;/font&gt; &lt;br /&gt;
-6、上交所联系老牌创投，参考战略新兴产业规划推50家企业。&lt;font color=&quot;red&quot;&gt;科创板肯定没我的份了，暂时只能是关注下。&lt;/font&gt;&lt;br /&gt;
-7、比特币连番下挫已击穿矿机成本价，已有矿场清盘。&lt;font color=&quot;red&quot;&gt;币圈的事情，不太懂，但我觉得一个没产生任何价值没有信用背书的东西，迟早要出事。&lt;/font&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;二今日实盘操作剖析&quot;&gt;&lt;strong&gt;二、今日实盘操作剖析&lt;/strong&gt;&lt;/h1&gt;
-&lt;h3 id=&quot;一操作&quot;&gt;&lt;strong&gt;（一）、操作&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;14.49卖了7手长江电力，&lt;font color=&quot;red&quot;&gt;这个股票不担心，一时半会儿不会有大动静，能接回来的&lt;/font&gt;；&lt;/li&gt;
-  &lt;li&gt;38.03买了3手格力电器；&lt;/li&gt;
-  &lt;li&gt;整体今日亏了七百，约莫-1.4%,如下图；&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/资产/资产IMG_20181120_150141.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;二剖析&quot;&gt;&lt;strong&gt;（二）、剖析&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;  非常抱歉，我的乌鸦嘴又说中了，果然没站稳2700不说，还来了个大跌。游资获利出走，再加上美股最近走势不好、美国采取更严厉的芯片封锁等影响，导致今日我大A股大跌，上证指数跌了2.13%，也是酸爽。我们先来看看资金流出情况：&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/板块/主力流出_2018-11-20-16-54-23-197_com.hsl.stock.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-  基本跟之前判断类似，大多都是前期被游资拉起来的概念板块，很多都是获利盘在出逃，甚至发生了踩踏事件。就跟昨天说的一样，雄安果然也是一日游。而再看大盘，明显的个股跌幅超过了大盘跌幅，跟之前预期也一样。然后要说的是，今天格力也是十分有趣 &lt;strong&gt;，一开始有一万多手在38.00整数关口托着收货，等到了后来跌破了38.00整数关口，到尾盘集合竞价的时候眼看着要张上去，重回38.00的时候又出现买盘卖盘一样多，而且是大单压着不让上38.00，这个我现在还没想清楚是啥套路，也许看了明天的走势能理解，如果哪位大佬有这方面经验，望不吝赐教与指出。&lt;/strong&gt; 截图如下：&lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/个股/2018.11.20/格力电器_2018-11-20-11-24-57-801_com.android.ha.png&quot; alt=&quot;&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/个股/2018.11.20/格力电器_2018-11-20-14-57-57-140_com.android.ha.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
-  今天还出了一些长江电力，38.03的时候补了点格力，理由大概有这些：&lt;font color=&quot;red&quot;&gt;1、市盈率、市净率等一系列财务指标以及技术指标目前都显示格力这个企业还是很不错的，成长价值也有的；2、董小姐说了五年6000亿的营业额（平均每年增速25%，这个目标以格力目前情况虽然比较困难，但还是有可能实现，即使实现不了，市值也会有大幅上涨），而且董小姐与雷布斯的赌局，董小姐赢面大一些；3、受行业以及银隆的事情今天跌的比较凶，但是它不跌我们哪有机会呀。而对于银隆的事，其实很简单，前段日子大佬参观的是格力、格力是“中国制造2025”不可或缺的一部分，这两个理由已经足够我们挺格力了，银隆的事情对格力造成的影响有限。&lt;/font&gt;&lt;/p&gt;
-&lt;h1 id=&quot;三操作预期&quot;&gt;&lt;strong&gt;三、操作预期&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;  之前的操作预期稍作调整：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://xueqiu.com/S/SH600900&quot;&gt;SH600900长江电力&lt;/a&gt;等格力获利出掉之后再接回来；&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://xueqiu.com/S/SZ000651&quot;&gt;SZ000651格力电器&lt;/a&gt;如果涨到40.00以上，卖出7手，如果跌到38.00左右买入；&lt;/li&gt;
-  &lt;li&gt;其余自选股继续观察，&lt;a href=&quot;https://xueqiu.com/S/SH601933&quot;&gt;SH601933永辉超市&lt;/a&gt;，应该会有一定收益，等&lt;a href=&quot;https://xueqiu.com/S/SH600729&quot;&gt;SH600729重庆百货&lt;/a&gt;26左右再卖掉它焕成重庆百货。此刻心疼我的重百1秒，已经T飞了，最近涨太好了；&lt;/li&gt;
-  &lt;li&gt;关于医药股，华润系的我一直也在关注，随时准备一梭子。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;四穷查理宝典阅读笔记&quot;&gt;&lt;strong&gt;四、《穷查理宝典》阅读笔记&lt;/strong&gt;&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;理解复利的魔力和获得它的困难是理解许多事情的核心和灵魂。&lt;/li&gt;
-  &lt;li&gt;我们偏向于把大量的钱投放在我们不用再另外作决策的地方。如果你因为一样东西的价值被低估而购买了它，那么当它的价格上涨到你预期的水平时，你就必须考虑把它卖掉。那很难。但是，如果你能购买几个伟大的公司，那么你就可以安坐下来啦。那是很好的事情。&lt;/li&gt;
-  &lt;li&gt;我们认为，有些事情就算你能做，而且做了不会受到法律的制裁，或者不会造成损失，你也不应该去做。你应该有一条底线。你心里应该有个指南针。所以有很多事情你不会去做，即使它们完全是合法的。这就是我们试图做到的经营方式。&lt;font color=&quot;red&quot;&gt;有所为有所不为。&lt;/font&gt;&lt;/li&gt;
-  &lt;li&gt;他并没有说诚实是最好的道德品质，他说诚实是最好的策略。&lt;font color=&quot;red&quot;&gt;其实这也是我不愿意再从事销售工作的一个原因，主观上或者客观上，有些时候不得不说一些不客观的话语，总是会让内心充满煎熬，有时候会有负罪感。最怕的是长此以往下去，必定有一天，我会连负罪感都没有。&lt;/font&gt;&lt;/li&gt;
-  &lt;li&gt;我们并不自称是道德高尚的人，但至少有很多即便合法的事情，也是我们不屑去做的。我们不会去做那些事情。目前美国有种文化认为，所有不会把你送进监狱的事情都是可以做的事情。&lt;font color=&quot;red&quot;&gt;现在的中国又何尝不是如此呢，往往我们遇事首先想到的并不是往圣先贤的教诲而是这样做我会不会获利，获利之后有没有什么后果。&lt;/font&gt;&lt;/li&gt;
-  &lt;li&gt;我们认为，在你应该做的事情和就算你做了也不会受到法律制裁的事情之间应该有一条巨大的鸿沟。&lt;font color=&quot;red&quot;&gt;“所有快速赚钱的方法都写进了刑法”这个段子实际上就是说这种事&lt;/font&gt;&lt;/li&gt;
-  &lt;li&gt;记住路易斯·文森狄的规则：说真话，你将无须记住你的谎言。就是这么简单的一个概念。&lt;/li&gt;
-  &lt;li&gt;现在很多人似乎认为企业CEO的责任就是让股票价格上涨。这种观点导致了各种各样的愚蠢行为。我们会实话实说，值多少就说多少。&lt;/li&gt;
-  &lt;li&gt;。。。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;
-微信公众平台对于markdown支持不够友好，建议阅读原文，另外本文是本人操作的实证与笔记，希望对你有用，如果由于我写的东西导致你判断失误，遭受了亏损，我只能说声抱歉，投资这种事情还是需要我们自己有主见。&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Tue, 20 Nov 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2018/11/20/%E5%A4%9C%E8%AF%AD08-%E4%B9%8C%E9%B8%A6%E5%98%B4%E6%88%90%E7%9C%9F.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2018/11/20/%E5%A4%9C%E8%AF%AD08-%E4%B9%8C%E9%B8%A6%E5%98%B4%E6%88%90%E7%9C%9F.html</guid>
-        
-        <category>炒股笔记</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>2018-11-19-夜语07——关于游资近期行为的推演</title>
-        <description>&lt;p&gt;&lt;em&gt;  “不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;  仔细思索了哈，我这人废话比较多，但大家比较喜欢看干货，标题改改吧，免得大伙说我是标题党哈哈。今天去选照片了，等修出来再看哈哈。选片的那个接待小姐姐态度挺差的，连我的话都听不完就在那不停说，都没理解我意思就在那乱讲，我一说啥她都是一个劲地说我们公司就这规定，所有客人都是这么操作的，言外之意我在提多么非分的无理要求，搞得好像我是多么难伺候的客人一样。熟悉我的人都知道，我以前也是做销售的，我买东西很体谅销售人员的，基本不会说是为难人家，她这搞得我非常不爽，就这还指望我加精修照片数量？就这还给我推荐换别的相册？我先拿个小本本记下来，等弄完我就投诉她，现阶段不搞事了，万一搞出啥幺蛾子，那就不合适了。忙完回家时候买了个石榴，还不错的：&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.11.19/IMG_20181119_144433.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;  闲言少叙，书归正传，说一些关于最近大盘走势的思考，今天的主题是：  &lt;strong&gt;关于游资最近行为的推演&lt;/strong&gt;&lt;br /&gt;
-  就我本人，我还是坚信价值投资，投机的事情不会去做。还记不记得2018年10月30日证监会发的“170个字”，如果忘了，我再帮大家温习一下：“&lt;strong&gt;正加快推动三方面工作，包括优化交易监管，减少交易阻力，增强市场流动性。加强上市公司治理，规范信息披露和提高透明度，创造条件鼓励上市公司开展回购和并购重组。减少对交易环节的不必要干预，让市场对监管有明确预期，让投资者有公平交易的机会；鼓励价值投资。发挥保险、社保、各类证券投资基金和资管产品等机构投资者的作用，引导更多增量中长期资金进入市场。&lt;/strong&gt;”   &lt;br /&gt;
-  很多大佬都解读过了，有一点至关重要：“减少干预，明确预期”，大家解读普遍均为游资你可以玩，不玩的离谱我不会搞事的。而今年整整一年游资被打压，到目前已经积攒了很大的“&lt;strong&gt;势能&lt;/strong&gt;”，所以政策底一出现，这些势能全部爆发，我们来看看最近游资们玩的路线：&lt;strong&gt;一开始先是创业板，后来是以长生生物为代表垃圾股，等到郭嘉看不下去给枪毙了长生生物，今天他们又因为‘国家制造强国建设领导小组车联网产业发展专委会第二次全体会议’在雄安召开，跑来拉雄安，表现得是十分得饥渴。&lt;/strong&gt;   &lt;br /&gt;
-  这是郭嘉想要的结果吗，大家都知道，明显不是，最近大盘几乎每天的走势全是黄上白下，今天才翻转过来，结果拉的还是雄安，还是炒作的题材跟套路。个人认为，郭嘉目前的态度想把股市作为一个吸收资金的蓄水池，而不是一个投机倒把的赌场，然而这群人真的是太皮了，每天换着题材炒，赚一票就走人那种，好不容易郭嘉松松管制，让你们猥琐发育，结果这些人抱着干一票走人的态度浪起来。&lt;strong&gt;郭嘉明显希望是拉起来指数的同时，让那些大白马、大蓝筹去吸引资金，尤其是吸收多年来放的水&lt;/strong&gt;。个人认为要不了多会，又会有新的政策出台，在这个国度还是得按照郭嘉给定得路线行事，目测明天不会再是雄安板块上天了。当然，游资这么做也不能说人家不对，资本本身就是逐利的，而且游资今年被打压已久，积攒的势能太大了，只是说这样不利于大盘的长期走势，今天若不是雄安板块的拉升与涨停，大盘可能都不一定能翻红。&lt;strong&gt;直至今日，上涨势头已经有些减弱了，量能都不如昨日，而且这一波也只是刚刚的站上2700点，如果那些游资这一步获利，开始出逃，大盘面临的便是一段时间的盘整，能否立稳2700点都不好说，所以我就抱着手里的那几只不动了&lt;/strong&gt;。  &lt;br /&gt;
-  &lt;strong&gt;以上是自己的一些看法，当然最好是打我的脸，啪啪啪的，那样大家都好，&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;一美味的瓜&quot;&gt;&lt;strong&gt;一、美味的瓜&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;（一）、先讲政治：&lt;/strong&gt;  &lt;br /&gt;
-【11月19日新闻联播汇总】&lt;br /&gt;
-1、习近平抵达斯里巴加湾，开始对文莱达鲁萨兰国进行国事访问。&lt;br /&gt;
-2、习近平在菲律宾媒体发表署名文章。&lt;br /&gt;
-3、习近平同法国总统互致贺电，庆祝“中法环境年”启动。&lt;br /&gt;
-4、李克强向联合国世界地理信息大会致贺信。&lt;br /&gt;
-5、李克强签署国务院令，公布 修订后的《专利代理条例》。&lt;br /&gt;
-6、哈萨克斯坦总理将访华，并举行中哈总理第四次定期会晤。&lt;br /&gt;
-7、人民日报评论员文章：只有改革开放才能发展中国——论习近平主席亚太工商峰会主旨演讲。&lt;br /&gt;
-8、山东：多措并举纾难解困。&lt;br /&gt;
-9、北斗三号：迈出从区域到全球的关键一步。&lt;br /&gt;
-10、全国农村网络零售额超1.2万亿。&lt;br /&gt;
-11、2020年北京主城区基本实现“电动公交”。&lt;br /&gt;
-12、国际社会积极评价习近平在亚太经合组织第二十六次领导人非正式会议上的讲话。&lt;br /&gt;
-13、鲁哈尼：伊朗伊拉克将建立自贸区。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（二）、再讲其他：&lt;/strong&gt;&lt;br /&gt;
-1、俞敏洪上了头条，原因是说了：“如果中国女人找男人就是要他赚钱，不管他是否有良心，那中国所有男人都会变成良心不好、但是赚钱很多的男人，（如果这样的话）现在中国是因为女性堕落导致整个国家堕落……”。&lt;font color=&quot;red&quot;&gt;  我只能说，俞老师是真·直男呀！&lt;/font&gt;&lt;br /&gt;
-2、国有资本投资、运营公司座谈会释放新信号：初步考虑新增10户左右试点企业，进一步扩大试点范围。&lt;font color=&quot;red&quot;&gt;混改新一轮走起，某些铁饭碗怕是要丢了。&lt;/font&gt;&lt;br /&gt;
-3、群兴玩具：终止设立群兴彩虹蜗牛幼儿园并购基金。&lt;font color=&quot;red&quot;&gt;求生欲真强。&lt;/font&gt;&lt;br /&gt;
-4、
-证监会：陕西西凤酒股份有限公司已申请撤回申报材料，决定取消对该公司发行申报文件的审核。&lt;font color=&quot;red&quot;&gt;都是一句话新闻，没有内容，字数越短，事情越大，请自行脑补。&lt;/font&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;二今日实盘操作剖析&quot;&gt;&lt;strong&gt;二、今日实盘操作剖析&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;h2 id=&quot;一操作&quot;&gt;&lt;strong&gt;（一）、操作&lt;/strong&gt;&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;无操作；&lt;/li&gt;
-  &lt;li&gt;整体今日涨了81，如下图；&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/资产/资产_2018-11-19-18-50-56-222_com.android.ha.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;二分析&quot;&gt;&lt;strong&gt;（二）、分析&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;操作灵活&quot;&gt;  &lt;strong&gt;操作灵活&lt;/strong&gt;&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;无&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;操作僵硬&quot;&gt;  &lt;strong&gt;操作僵硬&lt;/strong&gt;&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;无&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;三若有所思&quot;&gt;&lt;strong&gt;（三）、若有所思&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;  小盘涨完就轮到大盘了，不着急，耐心等待收割。&lt;/p&gt;
-
-&lt;h1 id=&quot;三操作预期&quot;&gt;&lt;strong&gt;三、操作预期&lt;/strong&gt;&lt;/h1&gt;
-
-&lt;p&gt;  目前维持之前预期操作不变：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://xueqiu.com/S/SH600900&quot;&gt;SH600900长江电力&lt;/a&gt;就当是打新用的了，超过一万部分卖掉，不够一万了再补上；&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://xueqiu.com/S/SZ000651&quot;&gt;SZ000651格力电器&lt;/a&gt;如果涨到40.00以上，卖出四手，如果跌到38.00左右买入；&lt;/li&gt;
-  &lt;li&gt;其余自选股继续观察，&lt;a href=&quot;https://xueqiu.com/S/SH601933&quot;&gt;SH601933永辉超市&lt;/a&gt;，应该会有一定收益，等&lt;a href=&quot;https://xueqiu.com/S/SH600729&quot;&gt;SH600729重庆百货&lt;/a&gt;26左右再卖掉它焕成重庆百货，心疼我的重百，T飞了，最近涨太好了；&lt;/li&gt;
-  &lt;li&gt;是时候仔细认真挑选一些股票，建个组合长线操作了，一些不熟悉的少碰，最多做下超短线。目前持有过，且赚钱较多的股票建立了一个股票池，下一步在读《穷查理宝典》有所悟的时候，仔细甄选，建立一个组合。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&quot;四穷查理宝典阅读笔记&quot;&gt;&lt;strong&gt;四、《穷查理宝典》阅读笔记&lt;/strong&gt;&lt;/h1&gt;
-&lt;ol&gt;
-  &lt;li&gt;最重要的观念是把股票当成企业的所有权;&lt;/li&gt;
-  &lt;li&gt;先选定一个容易理解的、有发展空间的、能够在任何市场环境下生存的主流行业，例如，许多投资者偏爱的制药业和高科技行业就直接被查理归为“太难理解”的项目，那些大张旗鼓宣传的“交易”和公开招股则立即被划入“不能投资”的项目，&lt;strong&gt;其实就是这个企业经营的好坏，浅而易见，所有韭菜都能理解这是个好公司，如果这个企业是个好企业，但他不容易被韭菜所理解，自然去接盘的韭菜比较少，股价很难上去；&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;查理认为，一个企业的竞争优势是该企业的“护城河”，是保护企业免遭入侵的无形沟壕。优秀的公司拥有很深的护城河，这些护城河不断加宽，为公司提供长久的保护。&lt;/li&gt;
-  &lt;li&gt;（购买）股价公道的伟大企业比（购买）股价超低的普通企业好;&lt;/li&gt;
-  &lt;li&gt;检查清单上的项目如下：目前的价格和成交量是多少？交易行情如何？经营年报何时披露？是否存在其他敏感因素？是否存在随时退出投资的策略？用来买股票的钱现在或将来有更好的用途吗？手头上有足够的流动资金吗？或者必须借贷？这笔资金的机会成本是多少？诸如此类;&lt;/li&gt;
-  &lt;li&gt;好吧，这是一家好公司。但它的股价足够低吗？它的管理层是由芒格和巴菲特满意的人组成的吗？如果股价低到可以购买的水平，那么它这么便宜正常吗？背后有什么蹊跷？是否存在我现在没看见的隐患？&lt;/li&gt;
-  &lt;li&gt;遇到不同的公司，你需要检查不同的因素，应用不同的思维模型。我无法简单地说：“就是这三点。”你必须把它（投资技巧）种到你的头脑里，然后用毕生的时间去培养它。&lt;/li&gt;
-  &lt;li&gt;所有聪明的投资都是价值投资——获得比你的付出更多的东西。你必须先评估一个企业的价值，然后才能评估它股票的价值。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;
-微信公众平台对于markdown支持不够友好，建议阅读原文，另外本文是本人操作的实证与笔记，希望对你有用，如果由于我写的东西导致你判断失误，遭受了亏损，我只能说声抱歉，投资这种事情还是需要我们自己有主见。&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Mon, 19 Nov 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2018/11/19/%E5%A4%9C%E8%AF%AD07-%E5%85%B3%E4%BA%8E%E6%B8%B8%E8%B5%84%E8%BF%91%E6%9C%9F%E8%A1%8C%E4%B8%BA%E7%9A%84%E6%8E%A8%E6%BC%94.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2018/11/19/%E5%A4%9C%E8%AF%AD07-%E5%85%B3%E4%BA%8E%E6%B8%B8%E8%B5%84%E8%BF%91%E6%9C%9F%E8%A1%8C%E4%B8%BA%E7%9A%84%E6%8E%A8%E6%BC%94.html</guid>
         
         <category>炒股笔记</category>
         
