@@ -1,6 +1,6 @@
 ---
 layout: post
-title: '玩转wsl-01-使用Xmanger本地登录wsl图形化界面'
+title: '玩转wsl-01-使用Xmanager本地登录wsl图形化界面'
 date: 2018-12-03
 author: fslong
 cover: 'https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-01.jpg'
