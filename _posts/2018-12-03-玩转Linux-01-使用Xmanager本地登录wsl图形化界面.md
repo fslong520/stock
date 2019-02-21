@@ -1,13 +1,13 @@
 ---
 layout: post
-title: '玩转wsl-01-使用Xmanager本地登录wsl图形化界面'
+title: '2018-12-03-玩转Linux-01-使用Xmanager本地登录wsl图形化界面'
 date: 2018-12-03
 author: fslong
 cover: 'https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2018.12.03/2018-12-03-01.jpg'
-tags: wsl
+tags: wsl,linux
 ---
   
-&emsp;&emsp;*“不积跬步无以至千里，不积小流无以成江海”，这个系列是我在玩wsl的时候写的一些东西。*  
+&emsp;&emsp;*“不积跬步无以至千里，不积小流无以成江海”，这个系列是我在玩Linux的时候写的一些东西。*  
    
 
 ---

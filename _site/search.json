@@ -1,6 +1,12 @@
 [
   
     {
+      "title"    : "2019-02-21-玩转Linux-02-使用花生壳内网穿透远程登录无公网IP的deepin Linux",
+      "tags"     : "linux",
+      "url"      : "/blog//2019/02/21/%E7%8E%A9%E8%BD%ACLinux-02-%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%97%A0%E5%85%AC%E7%BD%91IP%E7%9A%84deepin-Linux.html"
+    } ,
+  
+    {
       "title"    : "2019-02-10-上市公司研究01——重庆百货",
       "tags"     : "上市公司研究",
       "url"      : "/blog//2019/02/10/%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B601-%E9%87%8D%E5%BA%86%E7%99%BE%E8%B4%A7.html"
@@ -109,9 +115,9 @@
     } ,
   
     {
-      "title"    : "玩转wsl-01-使用Xmanager本地登录wsl图形化界面",
-      "tags"     : "wsl",
-      "url"      : "/blog//2018/12/03/%E7%8E%A9%E8%BD%ACwsl-01-%E4%BD%BF%E7%94%A8Xmanager%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%95wsl%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2.html"
+      "title"    : "2018-12-03-玩转Linux-01-使用Xmanager本地登录wsl图形化界面",
+      "tags"     : "wsl,linux",
+      "url"      : "/blog//2018/12/03/%E7%8E%A9%E8%BD%ACLinux-01-%E4%BD%BF%E7%94%A8Xmanager%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%95wsl%E5%9B%BE%E5%BD%A2%E5%8C%96%E7%95%8C%E9%9D%A2.html"
     } ,
   
     {
