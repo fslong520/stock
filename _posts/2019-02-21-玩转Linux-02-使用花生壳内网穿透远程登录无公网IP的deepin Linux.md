@@ -22,10 +22,9 @@ tags: linux
 **注意根据自己的系统选择对应的安装包，并使用相应代安装，以笔者为例，使用的是deepin（基于debian stretch）：** `sudo dpki -i phddns_3.0_x86_64`  
 安装完界面如下：![](https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221124356.png)  
 
-**注意：这里的终端不要关，后续还要用到这个SN码。**  
+**注意：这里的终端不要关，后续还要用到这个SN码**。       
 
-
-###　二、注册花生壳账户并开启内网穿透
+### 二、注册花生壳账户并开启内网穿透  
 
 &emsp;&emsp;**1、注册账户并登陆很简单，我就不在这细说了，注册完进入管理中心**    
 ![](https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221132344.png)     
