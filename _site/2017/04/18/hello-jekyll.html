@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Hello Jekyll - fslong的个人博客">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fslong520.github.io/blog/2017/04/18/hello-jekyll.html">
+    <meta property="og:url" content="http://localhost:4000/2017/04/18/hello-jekyll.html">
     <meta property="og:description" content="fslong的个人博客">
     <meta property="og:site_name" content="fslong的个人博客">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -110,25 +110,35 @@ Author: Ray-Eldath
 
   <header
     class="g-banner post-header post-pattern-circuitBoard bgcolor-default "
-    data-theme="default"
-  >
+    data-theme="default">
     <div class="post-wrapper">
       <div class="post-tags">
         
-          
-            <a href="https://fslong520.github.io/blog/blog/tags#jekyll" class="post-tag">jekyll</a>
-          
+        
+        <a href="http://localhost:4000/blog/tags#jekyll" class="post-tag">jekyll</a>
+        
         
       </div>
       <h1>Hello Jekyll</h1>
       <div class="post-meta">
-        <span class="post-meta-item"><i class="iconfont icon-author"></i>Jekyll</span>
-        <time class="post-meta-item" datetime="17-04-18"><i class="iconfont icon-date"></i>18 Apr 2017</time>
+        <span class="post-meta-item"><i
+            class="iconfont icon-author"></i>Jekyll</span>
+        <time class="post-meta-item" datetime="17-04-18"><i
+            class="iconfont icon-date"></i>18 Apr 2017</time>
+        <span class="post-meta-item"
+          id="wordNum">1111</span>
+        <script>
+          var a = document.getElementById("wordNum")
+          var num = parseInt(a.innerText)
+          a.innerText = "本篇文章共有" + num + "个字，大约需要" + (num / 350).toFixed(2) + "分钟阅读。"
+
+
+        </script>
       </div>
     </div>
     
     <div class="filter"></div>
-      <div class="post-cover" style="background: url('https://on2171g4d.bkt.clouddn.com/jekyll-banner.png') center no-repeat; background-size: cover;"></div>
+    <div class="post-cover" style="background: url('https://on2171g4d.bkt.clouddn.com/jekyll-banner.png') center no-repeat; background-size: cover;"></div>
     
   </header>
 
@@ -179,14 +189,14 @@ Author: Ray-Eldath
         
         <li>
           <a href="//weibo.com/fslong" target="_blank">
-                    <i class="iconfont icon-weibo"></i>
-                </a>
+            <i class="iconfont icon-weibo"></i>
+          </a>
         </li>
         
         <li>
           <a href="//github.com/fslong520" target="_blank">
-                    <i class="iconfont icon-github"></i>
-                </a>
+            <i class="iconfont icon-github"></i>
+          </a>
         </li>
         
       </ul>
@@ -204,7 +214,7 @@ Author: Ray-Eldath
         <div class="filter"></div>
         <img src="https://xqimg.imedao.com/166d00b94edb53f3feb48299.jpg" alt="">
         
-     </div>
+      </div>
       
 
       
