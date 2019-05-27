@@ -3,11 +3,279 @@
   <channel>
     <title>fslong的个人博客</title>
     <description>fslong的个人博客</description>
-    <link>http://localhost:4000/blog/</link>
-    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 20 May 2019 17:30:40 +0800</pubDate>
-    <lastBuildDate>Mon, 20 May 2019 17:30:40 +0800</lastBuildDate>
+    <link>https://fslong520.github.io/blog/blog/</link>
+    <atom:link href="https://fslong520.github.io/blog/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 27 May 2019 18:58:29 +0800</pubDate>
+    <lastBuildDate>Mon, 27 May 2019 18:58:29 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0.pre.alpha1</generator>
+    
+      <item>
+        <title>2019-05-27-夜语36——反攻日杂谈</title>
+        <description>&lt;p&gt;  &lt;em&gt;“不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;最近在培训，所以周更就写的简单点了，我尽量会保证每个月有一篇写的非常仔细有很多内容的。今天爬上来想说下几个小伙伴今天的骚操作，然后给大家分享一些数据。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot;&gt;下面内容强烈建议在Wifi下阅读，因为里面有很多很长很大的图！&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;一杂谈&quot;&gt;一、杂谈&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot;&gt;小伙伴A：&lt;/font&gt;&lt;/strong&gt; 早晨砸盘的时候割肉了，在拉升前离场了，剩下的我不用说了吧。&lt;br /&gt;
+&lt;strong&gt;&lt;font color=&quot;red&quot;&gt;小伙伴B：&lt;/font&gt;&lt;/strong&gt; 手里持有的股票上周砸的比较厉害，今早一上来就反弹了，然后挺到拉升前一秒，然后减仓，美其名曰留做T的仓位进可攻退可守，这样子我们后面的事情也不用讲了吧。&lt;br /&gt;
+&lt;br /&gt;
+发现没有，本来能吃到大肉的，结果他们怎样了？下面是鄙人一些愚见：&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;对自己手里的股票没自信，这种没自信源于对基本面没做过多的研究；&lt;/li&gt;
+    &lt;li&gt;买卖的时候没有一个心理预期的价位，到底多钱该买，多钱该卖未能量化，还是对股票研究不够透彻，不知道估值该怎样估；&lt;/li&gt;
+    &lt;li&gt;总想做波段，幻想着通过做T就能吃到肉；&lt;/li&gt;
+    &lt;li&gt;对大盘对中国经济没有深刻认识；&lt;/li&gt;
+    &lt;li&gt;…&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;可能还有些其他的原因，我这里就说说我想到的。其实前两条很简单，就是仔细阅读分析、思考这些股票的基本面即可，方法太多了，网上一搜一大把，我们需要做的只是学习自己认可的，然后严格执行。&lt;br /&gt;
+&lt;br /&gt;
+那第三条呢？我其实想问问大家，做T做成功过几次？我个人可能技术不够好，粗略反思了下，做T大概只有50%的成功几率，大多数时间把手里的筹码T飞了。如果股价在短期内服从随机分布，那涨跌的概率正好各50%，而我做T成功几率50%正好服从这个假设。&lt;br /&gt;
+&lt;br /&gt;
+第四条呢？上午收盘的时候我跟小伙伴粗略算了笔帐，那时候上证是2860点。由于我们每年都有6%以上的GDP增速，再加上M2的数据，差不多有9%吧，然后2860/1.09≈2624，也就是说今天相当于去年2623点左右，我们看看这个点位大概在哪？&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/分位点研究/上证A股K线2019-05-27.jpg&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt;
+发现没有，大约相当于去年11月份的样子，我们后来最惨也就经历了2440的事情对吧，然后就一波行情，最高道3288，算一下也就是下跌的话有200点不到的空间，上涨的话最起码还有600点空间。为了保险起见，我们打个折，上涨空间按500点算，也就是上涨空间至少是下跌空间的2.5倍，那我们现在应该做什么？自然是捂着自己手里的优质筹码打死都不动对吧。&lt;br /&gt;
+&lt;br /&gt;
+其实我们的股市跟我们的生活是离不开的，我说几个远期看好中国经济的原因：&lt;/p&gt;
+
+&lt;blockquote&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;去年是经济发展速度转慢的第一年，又遇到那个特不靠谱的锤子，所以人们预期很悲观，所以锤的非常狠，到了今年，大家都知道很惨了，反而预期没那么好，落差不会太大，所以反而不用过于担心；&lt;/li&gt;
+    &lt;li&gt;去年爆锤中兴我们认了，今年虽然特朗普锤的更厉害了，而今年我们奋起了，难道不是我们在特朗普的压力下越来越厉害了的表示吗？有些技能用得多了对方会产生抗体，就像疫苗一样；&lt;/li&gt;
+    &lt;li&gt;透过这些外部压力，让我们伟大的领导人们及勤劳的人民看到了我们目前真实的状态，让我们更加认清自己，从长远发展角度上来讲，反而是好事；&lt;/li&gt;
+    &lt;li&gt;接上一条原因，老板认识了不足，在外界压力下，以前可能能忍住不去动某些蛀虫的利益，但是在大环境不好的情况下，这些蛀虫怕是第一个要祭旗的，这其实也是种利好；&lt;/li&gt;
+    &lt;li&gt;从古至今，中国人都不是被外国人打趴下的，每次中国人趴下都是自己把自己给那啥了，我有理由相信，外界的压力只会让我们更加懂得吃苦更加团结；&lt;/li&gt;
+    &lt;li&gt;如果你认真研究了，买的中国最优质的那一类公司的股票，那更不用担心，行情不好的话这些公司反而是最保值的，行情好起来好公司自然更好，虽然有些烂公司往往在短期内增幅十分惊人，但是长期看你做的一定是一门很差的生意。如果你买的中国最好的公司都亏的裤衩都没了，那试问你做什么还能赚钱？&lt;/li&gt;
+    &lt;li&gt;…&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;二分享几组自己整理的数据&quot;&gt;二、分享几组自己整理的数据&lt;/h2&gt;
+
+&lt;h3 id=&quot;一上证指数估值变化&quot;&gt;(一)、上证指数估值变化&lt;/h3&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/分位点研究/大A股PE2019.05.27.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;统计了之前2999天的数据，目前上海A股PE处于24.41%的位置，当然前些年市场非常不成熟，比较失真，如果考虑近些年的话PE所处的位置肯定更低。
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;二申万一级分类各板块pe按净资产加权值&quot;&gt;(二)、申万一级分类各板块PE按净资产加权值&lt;/h3&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/分位点研究/申万一级分类.2019.05.27.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;上面有些数据比较奇怪，我们阅读的时候手动剔除就可以了。目前看很多行业都是严重低估的。
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;三个人关注的几支股票数据统计&quot;&gt;(三)、个人关注的几支股票数据统计&lt;/h3&gt;
+
+&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/分位点研究/股池PE分布2019.05.27.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;这部分内容大家看看就好，主要是我关注的一些股，里面的买卖点是动态变化的，不推荐直接抄作业。
+—&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;&lt;br /&gt;
+本文是本人操作的实证与笔记，希望对你有用，如果由于我写的东西导致你判断失误，遭受了亏损，我只能说声抱歉，投资这种事情还是需要我们自己有主见。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Mon, 27 May 2019 00:00:00 +0800</pubDate>
+        <link>https://fslong520.github.io/blog/blog/2019/05/27/%E5%A4%9C%E8%AF%AD36-%E5%8F%8D%E6%94%BB%E6%97%A5%E6%9D%82%E8%B0%88.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/05/27/%E5%A4%9C%E8%AF%AD36-%E5%8F%8D%E6%94%BB%E6%97%A5%E6%9D%82%E8%B0%88.html</guid>
+        
+        <category>炒股笔记</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>2019-05-21-上市公司研究02——飞科电器</title>
+        <description>&lt;p&gt;  &lt;em&gt;“不积跬步无以至千里，不积小流无以成江海”，这里主要放一些上市公司的研究，欢迎指正。&lt;/em&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;一企业基本情况&quot;&gt;一、企业基本情况&lt;/h2&gt;
+&lt;h3 id=&quot;一企业简介&quot;&gt;（一）、企业简介&lt;/h3&gt;
+
+&lt;p&gt;  我们先看下官网的公司简介：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/飞科电器/简介.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  百度百科及雪球之类网站上关于企业简介方面与之类似，具体就不再赘述，有几个重点需要注意：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;重庆市国资委管辖的国有企业（国企混改）；&lt;/li&gt;
+  &lt;li&gt;重庆市第一家商业上市公司；&lt;/li&gt;
+  &lt;li&gt;主要服务巴渝地区（既是地域壁垒又是地域限制）；&lt;/li&gt;
+  &lt;li&gt;主要有百货、电器、汽贸三个板块和重庆百货、新世纪百货、商社电器、商社汽贸四个大品牌；&lt;/li&gt;
+  &lt;li&gt;一带一路；&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;二组织构架&quot;&gt;（二）、组织构架&lt;/h3&gt;
+&lt;p&gt;  找了好久都没找到重百的组织构架图，我们就来感受下其控股母公司重庆商社的组织构架图吧：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/重庆商社.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;  注意到重庆商社的董事长与重百的董事长均为何谦先生，履历如下：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;何谦，男，生于1967年10月，博士研究生，教授。历任重庆大学校长办公室副科长，重庆大学科技投资公司副总经理，德国麦德龙集团Linden（Giessen）公司副经理（Betriebsleiter），重庆大学经济与工商管理学院市场系主任，重庆建设工业（集团）有限责任公司总经理助理、副总经理兼重庆建设摩托有限公司重庆建设销售有限责任公司总经理，重庆商社（集团）有限公司副总经理、总经理。 &lt;br /&gt;
+现任重庆商社（集团）有限公司董事长、党委书记、总经理，重庆百货大楼股份有限公司党委书记。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;  故此可以简单推断，重庆百货大楼股份有限公司为重庆商社整合资源之后的上市公司部分，该公司并没有整体上市。&lt;/strong&gt; 其股权透视图和参股控股情况如下（看不清的话可以下载下来看）：  &lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/股权穿透.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/参股控股.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/企业关系.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+  我们最为关注的自然是马上消费金融这块，经过2018年的暴雷，该死的已经死了，随着法律法规以及行业规范的完善，活下来的企业在以后的日子将会有较好的发展，总不能让这些全死了以后没得用吧。不过话说回来其2018年日子过得其实也还不错，重百投资他赚了不少的。&lt;/p&gt;
+
+&lt;h3 id=&quot;三经营范围&quot;&gt;（三）、经营范围&lt;/h3&gt;
+&lt;p&gt;  经营范围摘抄整理如下：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;1、劳务派遣（按许可证核定期限从事经营）。 &lt;br /&gt;
+2、批发、零售预包装食品、散装食品、粮油制品、副食品、其他食品、乳制品（含婴幼儿配方乳粉）、饮料、酒、茶叶、保健食品，书刊、音像制品零售，餐饮服务，卷烟、雪茄烟零售（以上经营范围限取得相关许可的分支机构经营）。&lt;br /&gt;
+3、普通货运，废旧家电回收。&lt;br /&gt;
+4、批发、零售水果、蔬菜、水产品、农副产品、冷鲜肉、工艺美术品（含黄金饰品）、日用百货、针纺织品、服装、五金、交电、通讯器材、照摄器材、健身器材、办公用品、保健用品（不含许可类医疗器械）、家具、计量衡器具、劳动保护用品、Ⅰ类医疗器械、Ⅱ类医疗器械（限非许可证商品：体温计、血压计、磁疗器具、医用脱脂棉、家用血糖仪、医用无菌纱布、计生用品）、花卉、建筑材料和化工产品及原料（不含危险化学品）、金属材料（不含稀贵金属）、消防器材、电器机械及器材、电线电缆，彩扩，批发、零售家用电器、钟表及其维修，停车服务，场地租赁，商务信息咨询服务，企业管理咨询服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;  其中最为主要的还是零售类。&lt;/p&gt;
+
+&lt;h2 id=&quot;二行业分析&quot;&gt;二、行业分析&lt;/h2&gt;
+&lt;p&gt;  其实百货与零售这个行业真的比较难以界定，有人主张将 &lt;strong&gt;永辉超市&lt;/strong&gt; 归为 &lt;strong&gt;零售行业&lt;/strong&gt; ，而 &lt;strong&gt;重百、大商&lt;/strong&gt; 这种归为 &lt;strong&gt;百货行业&lt;/strong&gt; ， &lt;strong&gt;万达、银泰城&lt;/strong&gt; 又是一种经营模式。关于行业分析已经有很多大神说过了，我个人也无法比人家说得更好，大家可以去雪球上搜索新零售有关东西。个人比较推荐搜索 &lt;code class=&quot;highlighter-rouge&quot;&gt;重庆百货：“新零售+马上爆发+混改提质增效”&lt;/code&gt; 这篇文章进行查看，重百的大的优势这篇文章已经讲的差不多的了。总而言之，在社会分工日益明确的今天以及将来，零售、百货行业的发展潜力是巨大的，这个行业也是我们愈发不能离开的。考虑到人口下降、消费理念升级、经济增速减缓等多种因素，个人认为虽然人们离不开该行业，但该行业想要有高速增长是近期也是很难的。&lt;/p&gt;
+
+&lt;h2 id=&quot;三公司财报解读及股价分析&quot;&gt;三、公司财报解读及股价分析&lt;/h2&gt;
+&lt;p&gt;  关于财报解读和股价分析可以写好多页，由于永辉超市也一直在看，两个企业也有一定的相似之处并有不少区别，在此处就简单说说并采用杜邦分析法与 &lt;strong&gt;永辉超市&lt;/strong&gt;  做一个简要对比。&lt;br /&gt;
+  首先看看股价基本情况：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/重百.jpg&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/永辉超市.jpg&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+  重百的市盈率，市净率都处于较低的位置，相比于52周最高点跌了28.2%。就市盈率而言重百只有永辉的五分之一，更有投资价值一些。基本面情况如下：
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/基本面.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+  我们注意到永辉市现率非常的高，估值在行业内算是比较高估的，但其资金状况比较好，偿债能力强，资产负债率在行业内是最低的。永辉目前盈利能力已经比较强，而重百近几年盈利能力增长较快，这应该跟企业体量有关，相比于重百，永辉更加接近行业天花板（已经是超市板块第一了）。受到云创亏损影响，永辉未来有一定时间内盈利增速要放缓。说到行业，我们注意到这里把重百归到了 &lt;strong&gt;多业态零售&lt;/strong&gt; ，而把永辉超市归到了 &lt;strong&gt;超市&lt;/strong&gt; 里，但点开股票看的时候显示的都是零售业，没弄懂，我们看看绝对值就行，相对值由于行业不同可比性不强。&lt;br /&gt;
+  我们再来看看杜邦分析（杜邦分析以净资产收益率为核心的财务指标，通过财务指标的内在联系，系统、综合的分析企业的盈利水平，具有很鲜明的层次结构，是典型的利用财务指标之间的关系对企业财务进行综合分析的方法。杜邦分析就是利用几种主要的财务比率之间的关系来综合地分析企业的财务状况，这种分析方法最早由美国杜邦公司使用，故名杜邦分析法。杜邦分析法是一种用来评价公司盈利能力和股东权益回报水平，从财务角度评价企业绩效的一种经典方法。其基本思想是将企业净资产收益率逐级分解为多项财务比率乘积，这样有助于深入分析比较企业经营业绩。）：
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/重百永辉杜邦分析对比.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+  如果看不清可以放大页面或者下载图片进行查看，从上图我们可以看出永辉和重百的净利润率都低的可怜，大概是这个行业特性导致的吧。相比而言重百的净资产收益率是永辉的两倍还要些，个人认为更加有长期投资价值。&lt;/p&gt;
+&lt;h2 id=&quot;四壁垒&quot;&gt;四、壁垒&lt;/h2&gt;
+&lt;p&gt;  似乎某个时间段开始，几乎每个城市都有自己的百货大楼，在巴渝地区自然是重百了，当地对其认可度还是很高的。成立六十余年来其见证着重庆的飞速发展，可以说，重百的发展就可以折射出重庆的发展，地域壁垒还是有一定的，但不是那种像茅台一样无法替代的，因为他的替代品实在太多，像永辉、大润发、家乐福、大商、沃尔玛等等，多的不能再多，只能靠着人们的情节，以及一定的文化壁垒来抵御其他品牌对其的冲击。&lt;br /&gt;
+  &lt;strong&gt;总而言之，其护城河有，但并不强，并不存在很强的壁垒性，领导层对其混改意愿十分强烈，希望通过此次混改能有比较不错的变化。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;五实际体验&quot;&gt;五、实际体验&lt;/h2&gt;
+&lt;p&gt;  巴菲特喜欢投资大家能接触得到看得懂的行业，我觉得深层次的原理其实很简单，就是只有大家都看得懂、都能看得到他的好才会去接盘，看都看不懂的自然是曲高和寡，接盘侠少了股价自然不会持续上涨。考虑到重百有线上商城也有线下实体店，故此这里分别从线上体验和线下体验来叙述。&lt;br /&gt;
+&lt;strong&gt;1、线上体验&lt;/strong&gt;&lt;br /&gt;
+  重百有自己的网上商城，名字叫做 &lt;strong&gt;世纪购&lt;/strong&gt;，自然是没法跟jd、tmall、suning这种比。商城bug有不少，东西只能说是很多但也有不少。很多东西可能大家都不了解，所以分别选了iPhone X和P20同jd作为对比（我们最关心的自然是价格）：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/iPhoneX.jpg&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/p20.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+  相比于京东，二者价格方面基本一致，世纪购跟重庆人一样比较直接，不需要去领券，直接就是券后价，但也没啥赠品。同时由于购买量比较少，部分京东上缺货的产品，世纪购还有现货，但从另外角度讲，这些现货也是库存，对于有效期要求的商品还是比较麻烦。我并没看多久，简单尝试了下搜索就发现了bug，搜索iPhone x不管你怎么调整空格大小写，搜出来的结果都是有问题的：&lt;br /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/上市公司研究/重庆百货/世纪购search.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;font color=&quot;red&quot;&gt; &amp;emsp;&amp;emsp;总而言之，线上体验自然是比不上大型电商，不过也还能将就，如果想买的某些产品在jd之类的电商上缺货的话，可以来此考虑，作为一个补充还是可以的。 &lt;/font&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;2、线下体验&lt;/strong&gt;&lt;br /&gt;
+  线下体验，重百逛的比较少，楼底下的新世纪百货和永辉超市逛的较多，而且其运营模式和所售产品也比较类似（虽然打的牌子是百货，实际观察却跟超市没两样，跟重百大楼还真不太一样），故此以我们楼下的两个超市作为对比叙述（不同地域差别可能比较大，而且这种比较相对主观，可能我们感受都有所不同，仅供参考）。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;序号&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;比较内容&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;新世纪百货&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;永辉超市&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;具体内容&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;服务质量&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★☆☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;服务质量二者都还不错，但新世纪还提供一些医疗急救、充电、雨伞租借等服务，有次买了隐形眼镜掉在超市收银台一周多还找见了。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;蔬果类货物&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★☆☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;蔬果类货物永辉超市个人感觉好一些，品种多一些，价格便宜些，还较为新鲜。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;3&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;饮品类&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★☆☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;饮品类新世纪的品种要多些，价格要便宜些。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;4&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;肉类&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★☆☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;新世纪猪肉分两大类，一种是普通的一种是那种高端些品牌的，中间隔开，一目了然。&lt;br /&gt;永辉这里是隔得不是那么明显，十几块一斤和二十几块一斤的在一起，得问清楚再买。&lt;br /&gt;鱼类新世纪得要多些，服务也好些。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;5&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;熟食&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;熟食类二者都差不多，都蛮好吃。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;6&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;日用百货&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;日用百货二者都是应有尽有，基本一致，甚至还有衣服卖。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;7&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;家用电器&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★☆☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★☆☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;均以小家电为主，无大型家电，价格适中。&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;8&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;新零售与高科技&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;★★★★☆&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;&lt;b&gt;高科技应用方面二者也能打平:&lt;/b&gt;&lt;br /&gt;1、新世纪可以使用美团外卖，重百跟多点合作也已经在部分网点上线多点自助购。&lt;br /&gt;2、新世纪买完东西结账时候如果刷了同微信绑定的会员卡，大约一分钟左右会有电子账单过来，也是很实用的。&lt;br /&gt;3、永辉的自助扫码结账机器用着挺好的，快速方便，也支持云闪付。&lt;br /&gt;4、永辉还有云创，包括超级物种什么的，但似乎就因为这兄弟两解除了一致性行动协议，对此网上也褒贬不一（我从未见过超级物种）。&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;red&quot;&gt; &amp;emsp;&amp;emsp;就超市业务来讲，个人认为新世纪百货在实际体验方面要稍好过永辉超市一些，但其门店少、优惠也少，地区外几乎没有什么扩张。而永辉超市相对较为成熟，全国性连锁，对于一些货物的供应、调配都有很大的优势，大数据时代更是要做大做强，全国不同地域不同商品的价格、销量本身就是很有价值的数据，新世纪在这方面更是同永辉难以相比，但换个角度来讲，新世纪的成长空间要更大，而且人们都是喜新厌旧的，这几年在这个超市买的东西多，如果有个新的超市还是会去尝试的。 &lt;/font&gt;&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;&lt;font color=&quot;red&quot;&gt; &amp;emsp;&amp;emsp;整体来讲，永辉更为精，而重百更为广，重百涉及到人们生活的东西种类更多，永辉则在超市方面走的更远，未来究竟谁能走得更远，拭目以待吧。 &lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;六总结&quot;&gt;六、总结&lt;/h2&gt;
+&lt;p&gt;  做重百这只股票的逻辑主要有以下几点：&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;作为新零售白马股的代表，目前的重百无疑有很强的投资价值，无论成长性还是经营状况都不错；&lt;/li&gt;
+  &lt;li&gt;随着国企混改的深入，重百有一个很好的发展机会，就看其是否能把握住。国企混改这里我想多说两句，一者混改是不能失败的，那样政治不正确，一者，到底是民营资本混改有资本，还是国有资本混改民营资本这还需要时间来验证，资本市场往往是谁资本大谁说了算，而中国最大的资本不用想必然是国有资本；&lt;/li&gt;
+  &lt;li&gt;美帝国主义亡我之心不死，故此大佬们搞了“一带一路”试图打破封锁，而现阶段，东方经济学思想“有形的手”与西方经济学思想“无形的手”的较量也才开始进入新的阶段，最终是哪种思想能够经得起时间的考验目前还不好说，需要时间来证明。不管怎样，“一带一路”的东风，重百应该能够获益；&lt;/li&gt;
+  &lt;li&gt;不管是“国企改革”还是“一带一路”都是中国政府为经济能够繁荣稳定地增长而采取的手段，作为重庆市首个商业上市公司，还是国有企业，重百自然是走在调控地最前端。当然我依然看好中国经济的发展，所以重百在此轮调控中获利地机会很大；&lt;/li&gt;
+  &lt;li&gt;换个说法，凭重百的经营情况和国家给予的支持与帮助，如果都要凉凉，那其他的零售类企业岂不是更凉。&lt;/li&gt;
+  &lt;li&gt;关于混改一直有小道消息说是阿里系要入局重百，而永辉是和腾讯系联手的，我个人其实很希望继续看两个马姓大佬互掐，这样能够带来技术进步的同时也会为我们带来一定的实惠。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;&lt;br /&gt;
+本文是本人在网络上收集整理的一些资料，希望对你有用，如果由于我写的东西导致你判断失误，遭受了亏损，我只能说声抱歉，投资这种事情还是需要我们自己有主见。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        <pubDate>Tue, 21 May 2019 00:00:00 +0800</pubDate>
+        <link>https://fslong520.github.io/blog/blog/2019/05/21/%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B602-%E9%A3%9E%E7%A7%91%E7%94%B5%E5%99%A8.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/05/21/%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B602-%E9%A3%9E%E7%A7%91%E7%94%B5%E5%99%A8.html</guid>
+        
+        <category>上市公司研究</category>
+        
+        
+      </item>
     
       <item>
         <title>2019-05-20-夜语35——人生路上的拐点</title>
@@ -17,7 +285,7 @@
 
 &lt;h2 id=&quot;一闲言碎语不失味&quot;&gt;&lt;strong&gt;一、闲言碎语不失味&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;  小伙伴们好久不见了，最近有点忙，更的比较少，周更都变成了月更，今天是我28岁生日，爬上来跟大家说说最近的情况与一些感悟，同时也贴一下最新的交易体系。&lt;br /&gt;
-  都说30而立，快30的我最近感觉心态、体力真心变化很大，跟前几年有了较大不同。身上肩负的担子也越来越重了，唯一值得欣慰的是隐约摸到了我要做的事和我未来的路。迷迷糊糊地度过了人生的一段迷茫期，这大概是这段时间最大的收获吧。目前感觉似乎是度过了人生路上的有一个拐点，希望能在这条路上走的更远，至于我要做什么，未来路是什么样的，感兴趣的朋友可以跟我私聊。&lt;br /&gt;
+  都说30而立，快30的我最近感觉心态、体力真心变化很大，跟前几年有了较大不同。身上肩负的担子也越来越重了，唯一值得欣慰的是隐约摸到了我要做的事和我未来的路。迷迷糊糊地度过了人生的一段迷茫期，这大概是这段时间最大的收获吧。目前感觉似乎是度过了人生路上的又一个拐点，希望能在这条路上走的更远，至于我要做什么，未来路是什么样的，感兴趣的朋友可以跟我私聊。&lt;br /&gt;
   去年下半年离开的东北，来到了西南，从祖国的一个角来到了另外一个角。感受非常的深，祖国还是大呀，一个角跟另外一个角的差别太大了。但我最大的感受还是人文环境差别太大，东北有种感觉就是大家都是死气沉沉，如暮年的老头，而南方的感觉是每个人都在拼，不论男女老少皆是如此，这个问题怕是要上溯到“五胡乱华”那个时代产生的影响吧，这里不再细说。&lt;br /&gt;
   回望这大半年做的事情主要包括如下：&lt;/p&gt;
 &lt;blockquote&gt;
@@ -151,8 +419,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 20 May 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/05/20/%E5%A4%9C%E8%AF%AD35-%E4%BA%BA%E7%94%9F%E8%B7%AF%E4%B8%8A%E7%9A%84%E6%8B%90%E7%82%B9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/05/20/%E5%A4%9C%E8%AF%AD35-%E4%BA%BA%E7%94%9F%E8%B7%AF%E4%B8%8A%E7%9A%84%E6%8B%90%E7%82%B9.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/05/20/%E5%A4%9C%E8%AF%AD35-%E4%BA%BA%E7%94%9F%E8%B7%AF%E4%B8%8A%E7%9A%84%E6%8B%90%E7%82%B9.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/05/20/%E5%A4%9C%E8%AF%AD35-%E4%BA%BA%E7%94%9F%E8%B7%AF%E4%B8%8A%E7%9A%84%E6%8B%90%E7%82%B9.html</guid>
         
         <category>炒股笔记</category>
         
@@ -211,8 +479,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Tue, 12 Mar 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/03/12/%E5%A4%9C%E8%AF%AD34-%E5%AE%88%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/03/12/%E5%A4%9C%E8%AF%AD34-%E5%AE%88%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/03/12/%E5%A4%9C%E8%AF%AD34-%E5%AE%88%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/03/12/%E5%A4%9C%E8%AF%AD34-%E5%AE%88%E5%A5%BD%E8%87%AA%E5%B7%B1%E7%9A%84%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5.html</guid>
         
         <category>炒股笔记</category>
         
@@ -274,8 +542,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Thu, 21 Feb 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/02/21/%E7%8E%A9%E8%BD%ACLinux-02-%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%97%A0%E5%85%AC%E7%BD%91IP%E7%9A%84deepin-Linux.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/02/21/%E7%8E%A9%E8%BD%ACLinux-02-%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%97%A0%E5%85%AC%E7%BD%91IP%E7%9A%84deepin-Linux.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/02/21/%E7%8E%A9%E8%BD%ACLinux-02-%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%97%A0%E5%85%AC%E7%BD%91IP%E7%9A%84deepin-Linux.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/02/21/%E7%8E%A9%E8%BD%ACLinux-02-%E4%BD%BF%E7%94%A8%E8%8A%B1%E7%94%9F%E5%A3%B3%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%97%A0%E5%85%AC%E7%BD%91IP%E7%9A%84deepin-Linux.html</guid>
         
         <category>linux</category>
         
@@ -452,8 +720,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sun, 10 Feb 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/02/10/%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B601-%E9%87%8D%E5%BA%86%E7%99%BE%E8%B4%A7.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/02/10/%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B601-%E9%87%8D%E5%BA%86%E7%99%BE%E8%B4%A7.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/02/10/%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B601-%E9%87%8D%E5%BA%86%E7%99%BE%E8%B4%A7.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/02/10/%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B8%E7%A0%94%E7%A9%B601-%E9%87%8D%E5%BA%86%E7%99%BE%E8%B4%A7.html</guid>
         
         <category>上市公司研究</category>
         
@@ -500,8 +768,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sun, 27 Jan 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/01/27/%E5%B0%8F%E5%A5%97%E8%B7%AF-2019.01.27%E6%9B%B4%E6%96%B0.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/01/27/%E5%B0%8F%E5%A5%97%E8%B7%AF-2019.01.27%E6%9B%B4%E6%96%B0.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/01/27/%E5%B0%8F%E5%A5%97%E8%B7%AF-2019.01.27%E6%9B%B4%E6%96%B0.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/01/27/%E5%B0%8F%E5%A5%97%E8%B7%AF-2019.01.27%E6%9B%B4%E6%96%B0.html</guid>
         
         <category>小套路</category>
         
@@ -586,8 +854,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sun, 27 Jan 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/01/27/%E5%A4%9C%E8%AF%AD33-%E6%B3%A8%E6%84%8F%E9%98%B2%E8%8C%83%E5%88%A9%E5%A5%BD%E5%87%BA%E5%B0%BD%E4%BE%BF%E6%98%AF%E5%88%A9%E7%A9%BA%E7%9A%84%E9%A3%8E%E9%99%A9.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/01/27/%E5%A4%9C%E8%AF%AD33-%E6%B3%A8%E6%84%8F%E9%98%B2%E8%8C%83%E5%88%A9%E5%A5%BD%E5%87%BA%E5%B0%BD%E4%BE%BF%E6%98%AF%E5%88%A9%E7%A9%BA%E7%9A%84%E9%A3%8E%E9%99%A9.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/01/27/%E5%A4%9C%E8%AF%AD33-%E6%B3%A8%E6%84%8F%E9%98%B2%E8%8C%83%E5%88%A9%E5%A5%BD%E5%87%BA%E5%B0%BD%E4%BE%BF%E6%98%AF%E5%88%A9%E7%A9%BA%E7%9A%84%E9%A3%8E%E9%99%A9.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/01/27/%E5%A4%9C%E8%AF%AD33-%E6%B3%A8%E6%84%8F%E9%98%B2%E8%8C%83%E5%88%A9%E5%A5%BD%E5%87%BA%E5%B0%BD%E4%BE%BF%E6%98%AF%E5%88%A9%E7%A9%BA%E7%9A%84%E9%A3%8E%E9%99%A9.html</guid>
         
         <category>炒股笔记</category>
         
@@ -661,8 +929,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Sun, 20 Jan 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/01/20/%E5%A4%9C%E8%AF%AD32-%E5%A4%A7%E5%89%8D%E6%8F%90%E4%B8%8E%E5%B0%8F%E5%89%8D%E6%8F%90.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/01/20/%E5%A4%9C%E8%AF%AD32-%E5%A4%A7%E5%89%8D%E6%8F%90%E4%B8%8E%E5%B0%8F%E5%89%8D%E6%8F%90.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/01/20/%E5%A4%9C%E8%AF%AD32-%E5%A4%A7%E5%89%8D%E6%8F%90%E4%B8%8E%E5%B0%8F%E5%89%8D%E6%8F%90.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/01/20/%E5%A4%9C%E8%AF%AD32-%E5%A4%A7%E5%89%8D%E6%8F%90%E4%B8%8E%E5%B0%8F%E5%89%8D%E6%8F%90.html</guid>
         
         <category>炒股笔记</category>
         
@@ -739,190 +1007,8 @@
 &lt;/blockquote&gt;
 </description>
         <pubDate>Mon, 14 Jan 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/01/14/%E5%A4%9C%E8%AF%AD31-%E5%86%99%E4%BD%9C%E7%9A%84%E8%BF%87%E7%A8%8B%E5%85%B6%E5%AE%9E%E6%98%AF%E6%80%9D%E8%80%83%E7%9A%84%E8%BF%87%E7%A8%8B.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/01/14/%E5%A4%9C%E8%AF%AD31-%E5%86%99%E4%BD%9C%E7%9A%84%E8%BF%87%E7%A8%8B%E5%85%B6%E5%AE%9E%E6%98%AF%E6%80%9D%E8%80%83%E7%9A%84%E8%BF%87%E7%A8%8B.html</guid>
-        
-        <category>炒股笔记</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>2019-01-13-夜语30——新股首日涨停制度</title>
-        <description>&lt;p&gt;  &lt;em&gt;“不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;一美味的瓜&quot;&gt;&lt;strong&gt;一、美味的瓜&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;（一）、先讲政治：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;【1月13日新闻联播汇总：中国共产党第十九届中央纪律检查委员会第三次全体会议开幕】&lt;br /&gt;
-1、中国共产党第十九届中央纪律检查委员会第三次全体会议开幕；&lt;br /&gt;
-2、2018年度国家最高科学技术奖获得者钱七虎：60载科研报国，铸就强国之盾。&lt;br /&gt;
-3、人社部部长张纪南：将实施高校毕业生就业创业计划，基层成长计划和青年就业启航计划等专项计划，研究企业降低社保费率的实施方案；&lt;br /&gt;
-4、全球能源互联网发展合作组织与海合会及埃塞签署三方协议，助推亚非电网互联。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（二）、再讲其他：&lt;/strong&gt;&lt;br /&gt;
-1、央行等13部委印发《广西壮族自治区建设面向东盟的金融开放门户总体方案》；  &lt;br /&gt;
-2、有消息说是要取消新股首日涨幅限制；&lt;br /&gt;
-3、嫦娥四号任务圆满成功，中国探月工程取得“五战五捷”；&lt;br /&gt;
-4、银保监会：2019年将研究新的对外开放措施，特别需要专业性外资保险机构进入中国；&lt;/p&gt;
-
-&lt;h2 id=&quot;二今日实盘操作&quot;&gt;&lt;strong&gt;二、今日实盘操作&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;一操作&quot;&gt;&lt;strong&gt;（一）、操作&lt;/strong&gt;&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;无；&lt;/li&gt;
-  &lt;li&gt;周五整体涨了1760，截图晚了，数据没显示，看下图吧：&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/资产/资产2019-01-13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;二分析&quot;&gt;&lt;strong&gt;（二）、分析&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;  先引用一个简评：&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;【1月11日收评：大盘午后稳步走强，次新股迎来久违暴涨】 &lt;br /&gt;
-1、11日，指数小幅高开，受到消息刺激，5G板块开盘积极上攻，昨日萎靡的券商板块稍有好转，总体指数开始走强，但好景不长，两市冲高之后立刻回落，三大指数集体翻绿，近期热点开始回调，午后大盘稍显走强，氢燃料电池板块的爆发带动了汽车板块的拉升，加之白酒回暖，指数逐渐回暖，但市场缩量迹象明显，板块轮动加快，次新股领涨两市，个股则涨多跌少，临近尾盘，指数持续走强。截止收盘沪指涨0.74%，深成指涨0.61%，创业板指涨0.20%。&lt;br /&gt;
-2、板块概念方面，次新股、燃料电池板块领涨，醋酸、中韩自贸区板块领跌。&lt;br /&gt;
-3、两市共2604只个股上涨，65只个股涨停，除新股外涨停64只，806只个股下跌，7只个股跌停，17只股票炸板，炸板率22%。&lt;br /&gt;
-4、沪股通流入29.6亿，深股通流入15.4亿。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;  最近这一周涨的不错，越到这种时候反而越需要谨慎，越容易翻车。关于取消新股首日涨幅的传闻，个人认为如果成真自然是好事。目前新股上市收入涨幅限制是44%，如果取消之后，就可以那些投机的以及赌客尽情厮杀，长痛不如短痛，短时间内股票进入合理的价格区段反而是对这个市场有利的。&lt;/p&gt;
-
-&lt;p&gt;最后看下板块的情况吧：  &lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/板块/资金流入流出2019-01-13.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;三投资总结与计划&quot;&gt;&lt;strong&gt;三、投资总结与计划&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;一总结&quot;&gt;(一)、总结&lt;/h3&gt;
-&lt;p&gt;1、今日无操作，这一周涨的不错，目前看来招行还有向上空间，继续耐心持有；&lt;br /&gt;
-2、格力应该会有个回调，在这个时候是个建仓的好时机，注意些；&lt;/p&gt;
-&lt;h3 id=&quot;二计划&quot;&gt;(二)、计划&lt;/h3&gt;
-&lt;p&gt;1、继续按照以前的操作路子，持有好的公司的股票，随着大盘单日涨跌幅加减仓就是了，其实没那么复杂。&lt;br /&gt;
-2、短期内吃吃波动带来的收益，长期内在市场底到来之前将仓位满上；&lt;/p&gt;
-
-&lt;h2 id=&quot;四读书笔记与一些思索&quot;&gt;&lt;strong&gt;四、读书笔记与一些思索&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;1、简单可以将股票的价值和价格用以下等式表示：股票价值=净资产+回报股东能力；股票价格=股票价值+所有交易者的一致预期。我们投资的时候如何去考量这只股票其实就是考虑上面的各个自变量；&lt;br /&gt;
-2、购买股票其实就像购买一个赚钱的公司或者系统的一部分；&lt;br /&gt;
-3、&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;&lt;br /&gt;
-本文是本人操作的实证与笔记，希望对你有用，如果由于我写的东西导致你判断失误，遭受了亏损，我只能说声抱歉，投资这种事情还是需要我们自己有主见。&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sun, 13 Jan 2019 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2019/01/13/%E5%A4%9C%E8%AF%AD30-%E6%96%B0%E8%82%A1%E9%A6%96%E6%97%A5%E6%B6%A8%E5%81%9C%E5%88%B6%E5%BA%A6.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2019/01/13/%E5%A4%9C%E8%AF%AD30-%E6%96%B0%E8%82%A1%E9%A6%96%E6%97%A5%E6%B6%A8%E5%81%9C%E5%88%B6%E5%BA%A6.html</guid>
-        
-        <category>炒股笔记</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>2019-01-10-夜语29——近况与新年规划</title>
-        <description>&lt;p&gt;  &lt;em&gt;“不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。&lt;/em&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;一美味的瓜&quot;&gt;&lt;strong&gt;一、美味的瓜&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;  结完婚回来了，各位小伙伴有没有想我呢？结婚前已经布好局，这段时间按照之前既定的交易计划进行操作，没有什么大的变动。已经开始婚后生活了，工作可能比较忙更新也不一定能每天更新，各位见谅，如果有啥想法可以跟我私聊哈，今天在后面简单说下近况以及今年的规划，按照旧例还是先把固定内容说了：  &lt;br /&gt;
-&lt;strong&gt;（一）、先讲政治：&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;【1月10日新闻联播汇总：习近平同金正恩举行会谈】&lt;br /&gt;
-1、习近平同朝鲜劳动党委员长金正恩举行会谈；&lt;br /&gt;
-2、中共中央印发《中国共产党农村基层组织工作条例》；&lt;br /&gt;
-3、李克强会见美国客人；&lt;br /&gt;
-4、韩正出席医疗保障工作座谈会；&lt;br /&gt;
-5、王岐山出席纪念中美建交40周年招待会并致辞；&lt;br /&gt;
-6、去年物价温和上涨，稳定在合理区间；&lt;br /&gt;
-7、工信部部长苗圩：将发放5G临时牌照；&lt;br /&gt;
-8、2019国际消费电子展开幕&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;（二）、再讲其他：&lt;/strong&gt;&lt;br /&gt;
-1、中美贸易协商双方都发了些声明，具体大家可以去查查；  &lt;br /&gt;
-2、怎么亚马逊的boos也要离婚了，突然觉得东哥这事好趣味；&lt;br /&gt;
-3、后续还有一大波实体经济的利好在酝酿哈；&lt;br /&gt;
-4、纪念中美建交40周年招待会举行，王岐山出席并致辞；&lt;br /&gt;
-5、工信部部长苗圩：今后还有更大的面向制造业的减税措施出台。 &lt;br /&gt;
-6、国家互联网信息办公室公布《区块链信息服务管理规定》，自2019年2月15日起施行：简言之，区块链也要实名制；&lt;/p&gt;
-
-&lt;h2 id=&quot;二今日实盘操作&quot;&gt;&lt;strong&gt;二、今日实盘操作&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;一操作&quot;&gt;&lt;strong&gt;（一）、操作&lt;/strong&gt;&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;无；&lt;/li&gt;
-  &lt;li&gt;今天整体涨了510，大约0.4%，看下图吧：&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/资产/资产2019-01-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;h3 id=&quot;二分析&quot;&gt;&lt;strong&gt;（二）、分析&lt;/strong&gt;&lt;/h3&gt;
-
-&lt;p&gt;  先引用一个简评：&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;【1月10日收评：大盘上演冲高回落走势，光伏、光通信板块涨势强劲】   &lt;br /&gt;
-1、10日，指数平开，大盘开盘之后下探回升，光伏强势拉升，而昨日活跃的汽车、家电则小幅分化，此后大盘小幅回落，指数持续横盘震荡，午后两市弱势盘整，沪指站上20日线之后稍有回踩，创业板指则继续受到均线的压制，未能突破，个股涨多跌少，仅抖音概念较为活跃，黄金板块也略有崛起，总体市场表现一般，临近尾盘，指数持续走弱。截止收盘沪指跌0.36%，深成指跌0.26%，创业板指跌0.28%。&lt;br /&gt;
-2、板块概念方面，光通信、光伏板块领涨，券商、京东金融板块领跌。  &lt;br /&gt;
-3、两市共1269只个股上涨，50只个股涨停，除新股外涨停48只，2089只个股下跌，4只个股跌停，25只股票炸板，炸板率34%。  &lt;br /&gt;
-4、沪股通流入9.93亿，深股通流入8.93亿。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;  这两天行情到底是反弹还是牛市起点？有人已经再喊2440是牛市起点了，我认为2440还是要跌破的，这两天的行情只是一轮小反弹而已。主要有以下几个方面内容：&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;虽然政府出台了很多刺激经济的政策，但目前来看实体经济还是没有起色，2019年元旦期间海南旅游人数大幅下降和汽车销量都是很好的说明；&lt;/li&gt;
-  &lt;li&gt;技术形态上还是在下降通道中阴跌，量能都很少，看不到突破迹象；&lt;/li&gt;
-  &lt;li&gt;历史经验来看，市场底往往会低到人们无法想象的地步，而2440这个点位还在大家的预期内；&lt;/li&gt;
-  &lt;li&gt;还是之前说的，A股在底部时间还太短，从政策底出现到现在时间并没有多少，美股点位依然很高，并没有多少外资从美股跑到A股，这真不是符合社会主义价值观的；&lt;/li&gt;
-  &lt;li&gt;洗走的散户也还太少。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;    反弹的高度怎么说呢？从趋势来看，个人认为2600点一堵墙，不要奢求太多，奢求太多反而成真不了，这几天注意减仓吧。&lt;/p&gt;
-
-&lt;p&gt;最后看下板块的情况吧：  &lt;br /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/板块/资金流入流出2019-01-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;三投资总结与计划&quot;&gt;&lt;strong&gt;三、投资总结与计划&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;一总结&quot;&gt;(一)、总结&lt;/h3&gt;
-&lt;p&gt;1、今日无操作，这一周涨了三千多将近四千，目前看来招行还有向上空间，继续耐心持有；&lt;br /&gt;
-2、格力昨日涨幅偏高，这点利好不足以支撑如此高的涨幅，故减仓6手；&lt;/p&gt;
-&lt;h3 id=&quot;二计划&quot;&gt;(二)、计划&lt;/h3&gt;
-&lt;p&gt;1、继续按照以前的操作路子，持有好的公司的股票，随着大盘单日涨跌幅加减仓就是了，其实没那么复杂。&lt;br /&gt;
-2、短期内吃吃波动带来的收益，长期内在市场底到来之前将仓位满上；&lt;/p&gt;
-
-&lt;h2 id=&quot;四近况与2019年规划&quot;&gt;&lt;strong&gt;四、近况与2019年规划&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&quot;一近况&quot;&gt;(一)、近况&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;刚结完婚，步入婚后生活，感觉还是很不一样的，虽然生活简单，但不枯燥也不无味，可能还是婚后时间太短，也可能是我们两口没有什么欲望，反正小日子挺美的；&lt;/li&gt;
-  &lt;li&gt;工作基本定下来了，同事人都挺好的，业务部的同事的薪资期望与业务期望吓我一跳；&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;二2019年规划&quot;&gt;(二)、2019年规划&lt;/h3&gt;
-&lt;ol&gt;
-  &lt;li&gt;工作好好做，稳定下来；&lt;/li&gt;
-  &lt;li&gt;炒股赚3万块；&lt;/li&gt;
-  &lt;li&gt;交个首付，最好是能拎包入住的那种房子；&lt;/li&gt;
-  &lt;li&gt;还有闲钱的话买个车子；&lt;/li&gt;
-  &lt;li&gt;经济学的一些基础的书和资料学完；&lt;/li&gt;
-  &lt;li&gt;公众号、个人网站进一步完善；&lt;/li&gt;
-  &lt;li&gt;是否去读研再仔细斟酌下，在职的没啥意义，脱产不现实，学习也不一定非要去学校。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;五读书笔记与一些思索&quot;&gt;&lt;strong&gt;五、读书笔记与一些思索&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;1、最近有个“逆周期经济调节”的说法挺6，深以为然。大致意思是现在全球市场泡沫都比较严重，我们在国内泡沫严重到将要boom之前主动缓慢戳破，先干为敬，等到别人泡沫boom的时候，我们已经消化掉这些泡沫了，此时我们的市场将会是全球最健康与最值得投资的市场，这样一方面我们的经济没有暴跌，很平稳地落地，另外一方面也给了全球经济一定的缓冲。反应到股市上便是大A股的先干为敬，在美股见顶之前我们已经到了政策底，这样一来在美股下跌的过程中，A股将可以很好发挥他作为蓄水池的能力吸引很多资本进来。试想一下如果大A股和美股同时暴跌，那全球金融危机也就不远了，这是很恐怖的，从这方面来讲，我国发展经济的大佬也是很厉害的。 &lt;strong&gt;大佬们都知道，阴跌其实是消灭泡沫的最好方式。&lt;/strong&gt;&lt;br /&gt;
-2、前面说了“逆周期经济调节”，这样就明白白马最近的走势了，先在美股高点时砸一波，洗出廉价筹码，而散户此时也会有很多都割肉离场，这样好公司的筹码会十分的廉价。一旦看到有接近市场底的情况（比如跌破2449），再杀进来，一波拉升，给韭菜们感觉牛市要来了，纷纷冲进来抬轿子，轿子抬起来了之后某些人就离场了，再等下一波机会。&lt;br /&gt;
-3、关于贸易磋商，我有个比喻：大房和二房姨太太势力都很大，其他房早都对其不满，而且她两都有几个儿子，内部也不是很稳定。如果大房和二房关系比较好，其他房势必要联合起来对付这两个，这样一来，即使强大如大房和二房都遭不住。于是大房跟二房开始打嘴炮，这样内部的矛盾显得不怎么重要，内部矛盾也有所缓解。其他房一看这两个打起来了，有些坐山观虎斗，有些帮忙煽风点火忙的不亦乐乎，但大房跟二房就是不实质性打，别的人只能干着急谁都不敢动。这样一来大房说我连二房的羊毛都薅，你们还不赶紧交保护费；二房说，大房太横行霸道了，我们得加强合作，共渡时艰，大伙都把自己得好东西拿出来分享下吧。于是大房跟二房打了好多年得嘴炮，越来越富有，其他房则越来越穷，所以此事要解决时间还会很长很长，是一场持久战，直到大房二房把别人吃干抹净才会真刀实枪的干，不然兔子和鹰酱拼个你死我活然后便宜毛熊和脚盆鸡？&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;声明：&lt;/strong&gt;&lt;br /&gt;
-本文是本人操作的实证与笔记，希望对你有用，如果由于我写的东西导致你判断失误，遭受了亏损，我只能说声抱歉，投资这种事情还是需要我们自己有主见。&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        <pubDate>Sat, 22 Dec 2018 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2018/12/22/%E5%A4%9C%E8%AF%AD29-%E8%BF%91%E5%86%B5%E4%B8%8E%E6%96%B0%E5%B9%B4%E8%A7%84%E5%88%92.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2018/12/22/%E5%A4%9C%E8%AF%AD29-%E8%BF%91%E5%86%B5%E4%B8%8E%E6%96%B0%E5%B9%B4%E8%A7%84%E5%88%92.html</guid>
+        <link>https://fslong520.github.io/blog/blog/2019/01/14/%E5%A4%9C%E8%AF%AD31-%E5%86%99%E4%BD%9C%E7%9A%84%E8%BF%87%E7%A8%8B%E5%85%B6%E5%AE%9E%E6%98%AF%E6%80%9D%E8%80%83%E7%9A%84%E8%BF%87%E7%A8%8B.html</link>
+        <guid isPermaLink="true">https://fslong520.github.io/blog/blog/2019/01/14/%E5%A4%9C%E8%AF%AD31-%E5%86%99%E4%BD%9C%E7%9A%84%E8%BF%87%E7%A8%8B%E5%85%B6%E5%AE%9E%E6%98%AF%E6%80%9D%E8%80%83%E7%9A%84%E8%BF%87%E7%A8%8B.html</guid>
         
         <category>炒股笔记</category>
         
