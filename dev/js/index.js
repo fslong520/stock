@@ -37,7 +37,7 @@ $(document).ready(function(){
                     header.addClass('headerUp');
                 }
                 header.css({
-                    'background-color': 'rgba(255, 255, 255, .50)',
+                    'background-color': 'rgba(255, 255, 255, .98)',
                     'box-shadow': '0 1px 12px rgba(0, 0, 0, .08)'
                 });
                 logo.css({
@@ -218,7 +218,7 @@ $(document).ready(function(){
         var date = new Date();
         var hour = date.getHours();
 
-        if ((hour >= 0 && hour <= 6) || hour === 23) {
+        if (hour <= 6 || hour >= 18) {
             el.addClass(className);
         }
     }
