@@ -1,6 +1,12 @@
 [
   
     {
+      "title"    : "2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发",
+      "tags"     : "linux,wsl,Python",
+      "url"      : "/blog/2019/07/16/%E7%8E%A9%E8%BD%ACLinux-03-Win10%E4%B8%8B%E4%BD%BF%E7%94%A8wsl%E4%B8%8EVS-code%E7%BB%93%E5%90%88%E8%BF%9B%E8%A1%8CPython%E5%BC%80%E5%8F%91.html"
+    } ,
+  
+    {
       "title"    : "2019-07-05-夜语41——天道有轮回，投资须善行",
       "tags"     : "炒股笔记",
       "url"      : "/blog/2019/07/05/%E5%A4%9C%E8%AF%AD41-%E5%A4%A9%E9%81%93%E6%9C%89%E8%BD%AE%E5%9B%9E-%E6%8A%95%E8%B5%84%E9%A1%BB%E5%96%84%E8%A1%8C.html"

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发 - fslong的个人博客</title>
+    <meta name="author"  content="fslong">
+    <meta name="description" content="2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发">
+    <meta name="keywords"  content="linux,wsl,Python">
+    <!-- Open Graph -->
+    <meta property="og:title" content="2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发 - fslong的个人博客">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fslong520.github.io/blog/2019/07/16/%E7%8E%A9%E8%BD%ACLinux-03-Win10%E4%B8%8B%E4%BD%BF%E7%94%A8wsl%E4%B8%8EVS-code%E7%BB%93%E5%90%88%E8%BF%9B%E8%A1%8CPython%E5%BC%80%E5%8F%91.html">
+    <meta property="og:description" content="fslong的个人博客">
+    <meta property="og:site_name" content="fslong的个人博客">
+    <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_roc50gemkxpw4s4i.css">
+    <link rel="stylesheet" href="/blog/assets/css/github-markdown.css">
+    <link rel="stylesheet" href="/blog/assets/css/prism.css">
+    <link rel="stylesheet" href="/blog/assets/css/share.min.css">
+    <link rel="stylesheet" href="/blog/assets/css/app.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	
+	<!--
+Author: Ray-Eldath
+refer to:
+ - http://docs.mathjax.org/en/latest/options/index.html
+-->
+
+	<script type="text/javascript" async src="https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+		jax: ["input/TeX", "output/HTML-CSS"],
+		tex2jax: {
+			inlineMath: [ ["$", "$"] ],
+			displayMath: [ ["$$", "$$"] ],
+			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+		},
+		"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] }
+      });
+    </script>
+
+	
+    <!--
+Author: Ray-Eldath
+-->
+<style>
+    .markdown-body .anchor{
+        float: left;
+        margin-top: -8px;
+        margin-left: -20px;
+        padding-right: 4px;
+        line-height: 1;
+        opacity: 0;
+    }
+    
+    .markdown-body .anchor .anchor-icon{
+        font-size: 15px
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        let nodes = document.querySelector(".markdown-body").querySelectorAll("h1,h2,h3")
+        for(let node of nodes) {
+            var anchor = document.createElement("a")
+            var anchorIcon = document.createElement("i")
+            anchorIcon.setAttribute("class", "fa fa-anchor fa-lg anchor-icon")
+            anchorIcon.setAttribute("aria-hidden", true)
+            anchor.setAttribute("class", "anchor")
+            anchor.setAttribute("href", "#" + node.getAttribute("id"))
+            
+            anchor.onmouseover = function() {
+                this.style.opacity = "0.4"
+            }
+            
+            anchor.onmouseout = function() {
+                this.style.opacity = "0"
+            }
+            
+            anchor.appendChild(anchorIcon)
+            node.appendChild(anchor)
+        }
+    })
+</script>
+</head>
+
+
+<body>
+  <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+  <input id="nm-switch" type="hidden" value="true"> <header class="g-header">
+    <div class="g-logo">
+      <a href="/blog/"></a>
+    </div>
+    <i id="menu-toggle" class="iconfont icon-menu"></i>
+    <nav class="g-nav">
+        <ul>
+            
+            <li><a href="/blog/blog/">home</a></li>
+            
+            <li><a href="/blog/blog/tags.html">tags</a></li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+  <header
+    class="g-banner post-header post-pattern-circuitBoard bgcolor-default "
+    data-theme="default">
+    <div class="post-wrapper">
+      <div class="post-tags">
+        
+        
+        <a href="https://fslong520.github.io/blog/blog/tags#linux,wsl,Python" class="post-tag">linux,wsl,Python</a>
+        
+        
+      </div>
+      <h1>2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发</h1>
+      <div class="post-meta">
+        <span class="post-meta-item"><i
+            class="iconfont icon-author"></i>fslong</span>
+        <time class="post-meta-item" datetime="19-07-16"><i
+            class="iconfont icon-date"></i>16 Jul 2019</time>
+        <span class="post-meta-item"
+          id="wordNum">1529</span>
+        <script>
+          var a = document.getElementById("wordNum")
+          var num = parseInt(a.innerText)
+          a.innerText = "本篇文章共有" + num + "个字，大约需要" + (num / 350).toFixed(2) + "分钟阅读。"
+
+
+        </script>
+      </div>
+    </div>
+    
+    <div class="filter"></div>
+    <div class="post-cover" style="background: url('') center no-repeat; background-size: cover;"></div>
+    
+  </header>
+
+  <div class="post-content visible">
+    
+
+    <article class="markdown-body">
+      <p>  <em>“不积跬步无以至千里，不积小流无以成江海”，这个系列是我在玩Linux的时候写的一些东西。</em></p>
+
+<hr />
+<p>  先交代下故事背景：现在Win10最新的预览版已经加入了wsl2，已经支持了docker，用了Linux4.19内核，非常的好用。由于工作关系，本人用了一段时间的Deepin，实事求是地讲Deepin非常的不错，日常使用也完全没问题的，但我遇到了在移动文件时候文件丢失的问题（exFat分区→Ntfs分区）然后就凉凉了，并且还是离不开OneDrive还有Microsoft office全家桶，于是叛变了两个礼拜的我又回到了Win10的怀抱。但大家都知道，Windows下面Python开发坑也不少，挺难受的，那有没有二者兼得的方法？答案是有的，那就是使用wsl和VS code结合的方法。但是网上很多教程其实都有点问题，有些要装一些插件，比较麻烦，本人意外的发现VS code官方文档其实已经有了推荐的方法，本文在此基础上夹带了一些私货，供大家体验。由于很多小伙被没有升级到最新的预览版，用不了wsl2，下文以另外一台只有wsl1的电脑为例讲解如何使用。</p>
+
+<h3 id="一原理">一、原理</h3>
+
+<p>  原理其实很简单，用的是远程连接wsl，其实是使用VS code远程连接WSL进行开发，但是由于wsl本身就在本地，还可以跟Win10系统的本地文件交互（现在性能已经挺好了），所以实际上在这些文件的操作又可以使用Win10系统，非常的舒服。</p>
+
+<h3 id="二注册花生壳账户并开启内网穿透">二、注册花生壳账户并开启内网穿透</h3>
+
+<p>  <strong>1、注册账户并登陆很简单，我就不在这细说了，注册完进入管理中心</strong>  <br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221132344.png" alt="" />   <br />
+进去之后如下图：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221132827.png" alt="" />  <br />
+向下拉点击1域名，再点击壳2域名（壳域名是免费的所以我们要用），新注册的账户一般自动生成一个壳域名，就像我圈起来的系统默认开通那个一样，比较奇怪的。第二个是我自注册的，也是免费的。每个帐号只可以注册一个免费的自定义的壳域名，当然你还可以花钱注册其他的，壳域名是不用备案的比较方便的那种。这里我们就实验用，所以就用第一个好了。<br />
+  <strong>2、添加设备</strong><br />
+如图，点击左侧的花生壳，再点击添加设备：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133308.png" alt="" /><br />
+输入我们刚刚在终端中看到的SN码，并点击确认：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133341.png" alt="" />  <br />
+然后我们就可以看到刚刚添加的设备了：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133539.png" alt="" /><br />
+  <strong>3、添加端口映射</strong><br />
+点击刚刚新添加的设备进入管理中心（就是Oray开头的那串字母加数字）：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133610.png" alt="" /><br />
+让微信扫一扫激活呢，那就扫吧，扫完可能还要绑定你注册的花生壳帐号，按提示操作即可，比较简单，然后点击进入平台：
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133655.png" alt="" /><br />
+在左侧点内网穿透，再点新增映射，然后填写所需内容。其中，应用名称自定义即可，选择域名选择刚刚那个壳域名，映射类型选应用类，外网端口就选择动态，静态是要钱的（动态的也不是一直在变，我中午建立的端口映射，晚上的时候还没变），内网主机就是你电脑的局域网地址，需要使用静态ip，自行查询怎么设置即可，内网端口就用ssh默认的22端口吧，当然你也可以自定义，注意一一对一即可，然后点击确定：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221134055.png" alt="" /><br />
+这时我们就可以看到刚刚建立成功的端口映射了（贷款只有1M，流量只有一个月1G）：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221134526.png" alt="" /><br />
+如果提示添加失败没有找到设备，那就是你电脑ssh配置的问题或者花生壳服务没有开启，重启花生壳服务的命令很简单是 <code class="highlighter-rouge">sudo phddns restart</code>，开启了如果还不行，请检查ssh服务开启情况，关于ssh服务配置教程很多，我就不在这里讲了。<br />
+  <strong>4、远程连接</strong><br />
+如果上述一切正常，那么使用ssh的远程连接命令即可连接，终端中输入<code class="highlighter-rouge">ssh [被连接电脑用户名]@[壳域名地址] -p [端口映射分配到的端口号]</code><br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_deepin-terminal_20190221134934.png" alt="" /></p>
+
+<p>  <strong>到这里教程就结束了，如果用其他的内网穿透服务商，其实也一样的，当然，用这个貌似很强大，但又好像啥都做不了，具体还需要你来开发！</strong></p>
+
+<hr />
+
+<blockquote>
+  <p><strong>声明：</strong>
+微信公众平台对于markdown支持不够友好，建议阅读原文。</p>
+</blockquote>
+
+    </article>
+
+    
+    <div class="social-share-wrapper">
+      <div class="social-share"></div>
+    </div>
+    
+  </div>
+
+  <section class="author-detail">
+    <section class="post-footer-item author-card">
+      <div class="avatar">
+        <img src="https://tva1.sinaimg.cn/crop.318.608.1137.1137.180/3c1b9c69jw8f1ptze8k4hj21kw1ekakh.jpg" alt="">
+      </div>
+      <div class="author-name" rel="author">fslong</div>
+      <div class="bio">
+        <p>在家猫着的小伙伴</p>
+      </div>
+      
+      <ul class="sns-links">
+        
+        <li>
+          <a href="//weibo.com/fslong" target="_blank">
+            <i class="iconfont icon-weibo"></i>
+          </a>
+        </li>
+        
+        <li>
+          <a href="//github.com/fslong520" target="_blank">
+            <i class="iconfont icon-github"></i>
+          </a>
+        </li>
+        
+      </ul>
+      
+    </section>
+    <section class="post-footer-item read-next">
+      
+
+      
+      <div class="read-next-item">
+        <a href="/blog/2019/07/05/%E5%A4%9C%E8%AF%AD41-%E5%A4%A9%E9%81%93%E6%9C%89%E8%BD%AE%E5%9B%9E-%E6%8A%95%E8%B5%84%E9%A1%BB%E5%96%84%E8%A1%8C.html" class="read-next-link"></a>
+        <section>
+          <span>2019-07-05-夜语41——天道有轮回，投资须善行</span>
+          <p>  “不积跬步无以至千里，不积小流无以成江海”，这个系列是我个人的闲言碎语，以投资笔记为主。</p>
+        </section>
+        
+        <div class="filter"></div>
+        <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/资产/资产2019-07-05.jpg" alt="">
+        
+      </div>
+      
+    </section>
+    
+  </section>
+
+  <footer class="g-footer">
+  <section>fslong的个人博客 ©
+  
+  
+    2017
+    -
+  
+  2019
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme H2O</a></section>
+</footer>
+
+
+  <script src="/blog/assets/js/social-share.min.js"></script>
+  <script>
+    socialShare('.social-share', {
+      sites: [
+        
+          'wechat'
+          ,
+          
+        
+          'weibo'
+          ,
+          
+        
+          'douban'
+          ,
+          
+        
+          'twitter'
+          
+        
+      ],
+      wechatQrcodeTitle: "分享到微信朋友圈",
+      wechatQrcodeHelper: '<p>扫码后点击右上角</p><p>将本文分享至朋友圈</p>'
+    });
+  </script>
+
+  
+
+  <script src="/blog/assets/js/prism.js"></script>
+  <script src="/blog/assets/js/index.min.js"></script>
+</body>
+
+</html>

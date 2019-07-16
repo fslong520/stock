@@ -1,0 +1,46 @@
+I"�<p>  <em>“不积跬步无以至千里，不积小流无以成江海”，这个系列是我在玩Linux的时候写的一些东西。</em></p>
+
+<hr />
+<p>  先交代下故事背景：现在Win10最新的预览版已经加入了wsl2，已经支持了docker，用了Linux4.19内核，非常的好用。由于工作关系，本人用了一段时间的Deepin，实事求是地讲Deepin非常的不错，日常使用也完全没问题的，但我遇到了在移动文件时候文件丢失的问题（exFat分区→Ntfs分区）然后就凉凉了，并且还是离不开OneDrive还有Microsoft office全家桶，于是叛变了两个礼拜的我又回到了Win10的怀抱。但大家都知道，Windows下面Python开发坑也不少，挺难受的，那有没有二者兼得的方法？答案是有的，那就是使用wsl和VS code结合的方法。但是网上很多教程其实都有点问题，有些要装一些插件，比较麻烦，本人意外的发现VS code官方文档其实已经有了推荐的方法，本文在此基础上夹带了一些私货，供大家体验。由于很多小伙被没有升级到最新的预览版，用不了wsl2，下文以另外一台只有wsl1的电脑为例讲解如何使用。</p>
+
+<h3 id="一原理">一、原理</h3>
+
+<p>  原理其实很简单，用的是远程连接wsl，其实是使用VS code远程连接WSL进行开发，但是由于wsl本身就在本地，还可以跟Win10系统的本地文件交互（现在性能已经挺好了），所以实际上在这些文件的操作又可以使用Win10系统，非常的舒服。</p>
+
+<h3 id="二注册花生壳账户并开启内网穿透">二、注册花生壳账户并开启内网穿透</h3>
+
+<p>  <strong>1、注册账户并登陆很简单，我就不在这细说了，注册完进入管理中心</strong>  <br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221132344.png" alt="" />   <br />
+进去之后如下图：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221132827.png" alt="" />  <br />
+向下拉点击1域名，再点击壳2域名（壳域名是免费的所以我们要用），新注册的账户一般自动生成一个壳域名，就像我圈起来的系统默认开通那个一样，比较奇怪的。第二个是我自注册的，也是免费的。每个帐号只可以注册一个免费的自定义的壳域名，当然你还可以花钱注册其他的，壳域名是不用备案的比较方便的那种。这里我们就实验用，所以就用第一个好了。<br />
+  <strong>2、添加设备</strong><br />
+如图，点击左侧的花生壳，再点击添加设备：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133308.png" alt="" /><br />
+输入我们刚刚在终端中看到的SN码，并点击确认：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133341.png" alt="" />  <br />
+然后我们就可以看到刚刚添加的设备了：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133539.png" alt="" /><br />
+  <strong>3、添加端口映射</strong><br />
+点击刚刚新添加的设备进入管理中心（就是Oray开头的那串字母加数字）：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133610.png" alt="" /><br />
+让微信扫一扫激活呢，那就扫吧，扫完可能还要绑定你注册的花生壳帐号，按提示操作即可，比较简单，然后点击进入平台：
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133655.png" alt="" /><br />
+在左侧点内网穿透，再点新增映射，然后填写所需内容。其中，应用名称自定义即可，选择域名选择刚刚那个壳域名，映射类型选应用类，外网端口就选择动态，静态是要钱的（动态的也不是一直在变，我中午建立的端口映射，晚上的时候还没变），内网主机就是你电脑的局域网地址，需要使用静态ip，自行查询怎么设置即可，内网端口就用ssh默认的22端口吧，当然你也可以自定义，注意一一对一即可，然后点击确定：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221134055.png" alt="" /><br />
+这时我们就可以看到刚刚建立成功的端口映射了（贷款只有1M，流量只有一个月1G）：<br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221134526.png" alt="" /><br />
+如果提示添加失败没有找到设备，那就是你电脑ssh配置的问题或者花生壳服务没有开启，重启花生壳服务的命令很简单是 <code class="highlighter-rouge">sudo phddns restart</code>，开启了如果还不行，请检查ssh服务开启情况，关于ssh服务配置教程很多，我就不在这里讲了。<br />
+  <strong>4、远程连接</strong><br />
+如果上述一切正常，那么使用ssh的远程连接命令即可连接，终端中输入<code class="highlighter-rouge">ssh [被连接电脑用户名]@[壳域名地址] -p [端口映射分配到的端口号]</code><br />
+<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_deepin-terminal_20190221134934.png" alt="" /></p>
+
+<p>  <strong>到这里教程就结束了，如果用其他的内网穿透服务商，其实也一样的，当然，用这个貌似很强大，但又好像啥都做不了，具体还需要你来开发！</strong></p>
+
+<hr />
+
+<blockquote>
+  <p><strong>声明：</strong>
+微信公众平台对于markdown支持不够友好，建议阅读原文。</p>
+</blockquote>
+:ET
