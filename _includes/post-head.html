@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="{{ "/assets/css/app.min.css" | relative_url }}">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-	{% if site.mathjax %}
+    <script src="https://cdn.jsdelivr.net/npm/lg-thumbnail@1.1.0/dist/lg-thumbnail.min.js"></script><!--图片缩略-->
+    {% if site.mathjax %}
 	{% include mathjax.html %}
 	{% endif %}
     {% include anchor.html %}
