@@ -5,8 +5,8 @@
     <description>fslong的个人博客</description>
     <link>https://fslong520.github.io/blog/blog//</link>
     <atom:link href="https://fslong520.github.io/blog/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 19 Jul 2019 12:08:01 +0800</pubDate>
-    <lastBuildDate>Fri, 19 Jul 2019 12:08:01 +0800</lastBuildDate>
+    <pubDate>Fri, 19 Jul 2019 14:23:31 +0800</pubDate>
+    <lastBuildDate>Fri, 19 Jul 2019 14:23:31 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0.pre.alpha1</generator>
     
       <item>
@@ -22,50 +22,50 @@
 &lt;h3 id=&quot;二配置方法&quot;&gt;二、配置方法&lt;/h3&gt;
 &lt;h4 id=&quot;一第一步自然是安装vscode和wsl相关教程很多不在这里赘述最终结果如下图所示&quot;&gt;（一）、第一步自然是安装VScode和wsl，相关教程很多，不在这里赘述，最终结果如下图所示：&lt;/h4&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//debian.jpg&quot; /&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//vscode.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/debian.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/vscode.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;h4 id=&quot;二在vscode里面安装插件remote-wsl如下图&quot;&gt;(二)、在vscode里面安装插件&lt;code class=&quot;highlighter-rouge&quot;&gt;remote-wsl&lt;/code&gt;，如下图：&lt;/h4&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//vscode.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/vscode.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;安装完了之后，我们点击左下角的和&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&amp;lt;&lt;/code&gt;按钮，在上方框框里选择&lt;code class=&quot;highlighter-rouge&quot;&gt;Ropen folder in wsl&lt;/code&gt;，如下图所示：&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//remote-wsl.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/remote-wsl.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;首次运行得等会儿，会安装一些服务，然后有&lt;code class=&quot;highlighter-rouge&quot;&gt;Node.js&lt;/code&gt;的联网请求，当然是点允许，如下图所示：&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//node.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/node.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;之后的界面就会变成如下：&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//completely.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/completely.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;这里有个需要注意的地方，其实在wsl里面我们也装了一个vscode的服务，我们现在在vscode里面安装插件的时候可以看到左侧有个&lt;code class=&quot;highlighter-rouge&quot;&gt;local&lt;/code&gt;还有个&lt;code class=&quot;highlighter-rouge&quot;&gt;wsl&lt;/code&gt;分类，如下图所示：&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//localAndWsl.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/localAndWsl.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;这就表示其实我们编程的时候很多东西都是调用的wsl里头的东西，所以我们安装插件的时候要想在wsl里面也能用，必须要把他安装到wsl里面才能使用，比如下面的语言包：&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//Chinese.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/Chinese.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;其实就是用VScode远程连接进行开发，没什么特殊的！&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;需要注意的是: &lt;font color=&quot;red&quot;&gt;安装完这个插件以后，当我们在打开文件夹的时候就会有两种提示，一种是打开本地，一种是打开wsl。由于在wsl中电脑磁盘是挂载在`/mnt/`目录下的，所以在打开wsl目录的时候就会有以下的提示：&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;需要注意的是: &lt;font color=&quot;red&quot;&gt;安装完这个插件以后，当我们在打开文件夹的时候就会有两种提示，一种是打开本地，一种是打开wsl。由于在wsl中电脑磁盘是挂载在/mnt/目录下的，所以在打开wsl目录的时候就会有以下的提示：&lt;/font&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//openFolder.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/openFolder.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;如果我们点击右边的&lt;code class=&quot;highlighter-rouge&quot;&gt;show local&lt;/code&gt;自然是打开Windows目录下的文件夹，使用起来很方便，如下图：&lt;/p&gt;
 &lt;p align=&quot;center&quot;&gt;
-    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog//openLocal.jpg&quot; /&gt;
+    &lt;img src=&quot;https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/openLocal.jpg&quot; /&gt;
 &lt;/p&gt;
 
 &lt;p&gt;不过个人还是建议直接一直就在wsl下得了，反正也能直接读写windows10的目录，笔者直接就是在OneDrive当中开发（日常关着的，过几天启动下OneDrive同步一次），这样不影响性能还是同步，还能使用wsl，简直美滋滋。&lt;/p&gt;

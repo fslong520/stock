@@ -3,7 +3,7 @@ layout: post
 title: '2019-07-19-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发'
 date: 2019-7-19
 author: fslong
-cover: ''
+cover: 'https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/debian.jpg'
 tags: linux,wsl,Python
 ---
   
@@ -19,51 +19,51 @@ tags: linux,wsl,Python
 ### 二、配置方法 
 #### （一）、第一步自然是安装VScode和wsl，相关教程很多，不在这里赘述，最终结果如下图所示：   
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//debian.jpg">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//vscode.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/debian.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/vscode.jpg">
 </p>  
 
 #### (二)、在vscode里面安装插件`remote-wsl`，如下图：  
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//vscode.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/vscode.jpg">
 </p>   
 
 安装完了之后，我们点击左下角的和`><`按钮，在上方框框里选择`Ropen folder in wsl`，如下图所示：  
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//remote-wsl.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/remote-wsl.jpg">
 </p>    
 
 首次运行得等会儿，会安装一些服务，然后有`Node.js`的联网请求，当然是点允许，如下图所示：  
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//node.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/node.jpg">
 </p>  
 
 之后的界面就会变成如下：
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//completely.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/completely.jpg">
 </p>  
 
 这里有个需要注意的地方，其实在wsl里面我们也装了一个vscode的服务，我们现在在vscode里面安装插件的时候可以看到左侧有个`local`还有个`wsl`分类，如下图所示：  
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//localAndWsl.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/localAndWsl.jpg">
 </p>  
 
 这就表示其实我们编程的时候很多东西都是调用的wsl里头的东西，所以我们安装插件的时候要想在wsl里面也能用，必须要把他安装到wsl里面才能使用，比如下面的语言包：  
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//Chinese.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/Chinese.jpg">
 </p>  
 
 **其实就是用VScode远程连接进行开发，没什么特殊的！**  
   
 
-需要注意的是: <font color="red">安装完这个插件以后，当我们在打开文件夹的时候就会有两种提示，一种是打开本地，一种是打开wsl。由于在wsl中电脑磁盘是挂载在`/mnt/`目录下的，所以在打开wsl目录的时候就会有以下的提示：</font>  
+需要注意的是: <font color="red">安装完这个插件以后，当我们在打开文件夹的时候就会有两种提示，一种是打开本地，一种是打开wsl。由于在wsl中电脑磁盘是挂载在/mnt/目录下的，所以在打开wsl目录的时候就会有以下的提示：</font>  
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//openFolder.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/openFolder.jpg">
 </p>  
 
 如果我们点击右边的`show local`自然是打开Windows目录下的文件夹，使用起来很方便，如下图：  
 <p align="center">
-    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//openLocal.jpg">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/openLocal.jpg">
 </p>    
 
 不过个人还是建议直接一直就在wsl下得了，反正也能直接读写windows10的目录，笔者直接就是在OneDrive当中开发（日常关着的，过几天启动下OneDrive同步一次），这样不影响性能还是同步，还能使用wsl，简直美滋滋。
