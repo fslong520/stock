@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发 - fslong的个人博客</title>
+    <title>2019-07-19-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发 - fslong的个人博客</title>
     <meta name="author"  content="fslong">
-    <meta name="description" content="2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发">
+    <meta name="description" content="2019-07-19-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发">
     <meta name="keywords"  content="linux,wsl,Python">
     <!-- Open Graph -->
-    <meta property="og:title" content="2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发 - fslong的个人博客">
+    <meta property="og:title" content="2019-07-19-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发 - fslong的个人博客">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fslong520.github.io/blog/2019/07/16/%E7%8E%A9%E8%BD%ACLinux-03-Win10%E4%B8%8B%E4%BD%BF%E7%94%A8wsl%E4%B8%8EVS-code%E7%BB%93%E5%90%88%E8%BF%9B%E8%A1%8CPython%E5%BC%80%E5%8F%91.html">
+    <meta property="og:url" content="https://fslong520.github.io/blog/2019/07/19/%E7%8E%A9%E8%BD%ACLinux-03-Win10%E4%B8%8B%E4%BD%BF%E7%94%A8wsl%E4%B8%8EVS-code%E7%BB%93%E5%90%88%E8%BF%9B%E8%A1%8CPython%E5%BC%80%E5%8F%91.html">
     <meta property="og:description" content="fslong的个人博客">
     <meta property="og:site_name" content="fslong的个人博客">
     <link rel="stylesheet" href="//cdn.staticfile.org/normalize/6.0.0/normalize.min.css">
@@ -119,14 +119,14 @@ Author: Ray-Eldath
         
         
       </div>
-      <h1>2019-07-16-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发</h1>
+      <h1>2019-07-19-玩转Linux-03-Win10下使用wsl与VS code结合进行Python开发</h1>
       <div class="post-meta">
         <span class="post-meta-item"><i
             class="iconfont icon-author"></i>fslong</span>
-        <time class="post-meta-item" datetime="19-07-16"><i
-            class="iconfont icon-date"></i>16 Jul 2019</time>
+        <time class="post-meta-item" datetime="19-07-19"><i
+            class="iconfont icon-date"></i>19 Jul 2019</time>
         <span class="post-meta-item"
-          id="wordNum">1529</span>
+          id="wordNum">1477</span>
         <script>
           var a = document.getElementById("wordNum")
           var num = parseInt(a.innerText)
@@ -149,41 +149,63 @@ Author: Ray-Eldath
       <p>  <em>“不积跬步无以至千里，不积小流无以成江海”，这个系列是我在玩Linux的时候写的一些东西。</em></p>
 
 <hr />
-<p>  先交代下故事背景：现在Win10最新的预览版已经加入了wsl2，已经支持了docker，用了Linux4.19内核，非常的好用。由于工作关系，本人用了一段时间的Deepin，实事求是地讲Deepin非常的不错，日常使用也完全没问题的，但我遇到了在移动文件时候文件丢失的问题（exFat分区→Ntfs分区）然后就凉凉了，并且还是离不开OneDrive还有Microsoft office全家桶，于是叛变了两个礼拜的我又回到了Win10的怀抱。但大家都知道，Windows下面Python开发坑也不少，挺难受的，那有没有二者兼得的方法？答案是有的，那就是使用wsl和VS code结合的方法。但是网上很多教程其实都有点问题，有些要装一些插件，比较麻烦，本人意外的发现VS code官方文档其实已经有了推荐的方法，本文在此基础上夹带了一些私货，供大家体验。由于很多小伙被没有升级到最新的预览版，用不了wsl2，下文以另外一台只有wsl1的电脑为例讲解如何使用。</p>
+<p>  先交代下故事背景：现在Win10最新的预览版已经加入了wsl2，已经支持了docker，用了Linux4.19内核，非常的好用，同时性能杠杠的，笔者一台好久之前的笔记本wsl2使用Unixbench跑分大约1620分，deepin跑分1700分，基本上可以理解为误差了。由于工作关系，本人用了一段时间的Deepin，实事求是地讲Deepin非常的不错，日常使用也完全没问题的，但我遇到了在移动文件时候文件丢失的问题（exFat分区→Ntfs分区）然后就凉凉了，并且还是离不开OneDrive还有Microsoft office全家桶，于是叛变了两个礼拜的我又回到了Win10的怀抱。但大家都知道，Windows下面Python开发坑也不少，挺难受的，那有没有二者兼得的方法？答案是有的，那就是使用wsl和VS code结合的方法。但是网上很多教程其实都有点问题，有些不好用，有些配置比较麻烦，本人意外的发现VS code官方文档其实已经有了推荐的方法，本文在此基础上夹带了一些私货，供大家体验。由于很多小伙被没有升级到最新的预览版，用不了wsl2，下文以另外一台只有wsl1的电脑为例讲解如何使用。</p>
 
 <h3 id="一原理">一、原理</h3>
+<p>  原理其实很简单，用的是远程连接wsl。是使用VS code远程连接WSL进行开发，但是由于wsl本身就在本地，还可以跟Win10系统的本地文件交互（现在性能已经挺好了），所以实际上在这些文件的操作又可以使用Win10系统，非常的舒服。</p>
 
-<p>  原理其实很简单，用的是远程连接wsl，其实是使用VS code远程连接WSL进行开发，但是由于wsl本身就在本地，还可以跟Win10系统的本地文件交互（现在性能已经挺好了），所以实际上在这些文件的操作又可以使用Win10系统，非常的舒服。</p>
+<h3 id="二配置方法">二、配置方法</h3>
+<h4 id="一第一步自然是安装vscode和wsl相关教程很多不在这里赘述最终结果如下图所示">（一）、第一步自然是安装VScode和wsl，相关教程很多，不在这里赘述，最终结果如下图所示：</h4>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//debian.jpg" />
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//vscode.jpg" />
+</p>
 
-<h3 id="二注册花生壳账户并开启内网穿透">二、注册花生壳账户并开启内网穿透</h3>
+<h4 id="二在vscode里面安装插件remote-wsl如下图">(二)、在vscode里面安装插件<code class="highlighter-rouge">remote-wsl</code>，如下图：</h4>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//vscode.jpg" />
+</p>
 
-<p>  <strong>1、注册账户并登陆很简单，我就不在这细说了，注册完进入管理中心</strong>  <br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221132344.png" alt="" />   <br />
-进去之后如下图：<br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221132827.png" alt="" />  <br />
-向下拉点击1域名，再点击壳2域名（壳域名是免费的所以我们要用），新注册的账户一般自动生成一个壳域名，就像我圈起来的系统默认开通那个一样，比较奇怪的。第二个是我自注册的，也是免费的。每个帐号只可以注册一个免费的自定义的壳域名，当然你还可以花钱注册其他的，壳域名是不用备案的比较方便的那种。这里我们就实验用，所以就用第一个好了。<br />
-  <strong>2、添加设备</strong><br />
-如图，点击左侧的花生壳，再点击添加设备：<br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133308.png" alt="" /><br />
-输入我们刚刚在终端中看到的SN码，并点击确认：<br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133341.png" alt="" />  <br />
-然后我们就可以看到刚刚添加的设备了：<br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133539.png" alt="" /><br />
-  <strong>3、添加端口映射</strong><br />
-点击刚刚新添加的设备进入管理中心（就是Oray开头的那串字母加数字）：<br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133610.png" alt="" /><br />
-让微信扫一扫激活呢，那就扫吧，扫完可能还要绑定你注册的花生壳帐号，按提示操作即可，比较简单，然后点击进入平台：
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221133655.png" alt="" /><br />
-在左侧点内网穿透，再点新增映射，然后填写所需内容。其中，应用名称自定义即可，选择域名选择刚刚那个壳域名，映射类型选应用类，外网端口就选择动态，静态是要钱的（动态的也不是一直在变，我中午建立的端口映射，晚上的时候还没变），内网主机就是你电脑的局域网地址，需要使用静态ip，自行查询怎么设置即可，内网端口就用ssh默认的22端口吧，当然你也可以自定义，注意一一对一即可，然后点击确定：<br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221134055.png" alt="" /><br />
-这时我们就可以看到刚刚建立成功的端口映射了（贷款只有1M，流量只有一个月1G）：<br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_选择区域_20190221134526.png" alt="" /><br />
-如果提示添加失败没有找到设备，那就是你电脑ssh配置的问题或者花生壳服务没有开启，重启花生壳服务的命令很简单是 <code class="highlighter-rouge">sudo phddns restart</code>，开启了如果还不行，请检查ssh服务开启情况，关于ssh服务配置教程很多，我就不在这里讲了。<br />
-  <strong>4、远程连接</strong><br />
-如果上述一切正常，那么使用ssh的远程连接命令即可连接，终端中输入<code class="highlighter-rouge">ssh [被连接电脑用户名]@[壳域名地址] -p [端口映射分配到的端口号]</code><br />
-<img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/杂/2019.02.21/使用花生壳内网穿透远程访问deepin%20Linux/深度截图_deepin-terminal_20190221134934.png" alt="" /></p>
+<p>安装完了之后，我们点击左下角的和<code class="highlighter-rouge">&gt;&lt;</code>按钮，在上方框框里选择<code class="highlighter-rouge">Ropen folder in wsl</code>，如下图所示：</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//remote-wsl.jpg" />
+</p>
 
-<p>  <strong>到这里教程就结束了，如果用其他的内网穿透服务商，其实也一样的，当然，用这个貌似很强大，但又好像啥都做不了，具体还需要你来开发！</strong></p>
+<p>首次运行得等会儿，会安装一些服务，然后有<code class="highlighter-rouge">Node.js</code>的联网请求，当然是点允许，如下图所示：</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//node.jpg" />
+</p>
+
+<p>之后的界面就会变成如下：</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//completely.jpg" />
+</p>
+
+<p>这里有个需要注意的地方，其实在wsl里面我们也装了一个vscode的服务，我们现在在vscode里面安装插件的时候可以看到左侧有个<code class="highlighter-rouge">local</code>还有个<code class="highlighter-rouge">wsl</code>分类，如下图所示：</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//localAndWsl.jpg" />
+</p>
+
+<p>这就表示其实我们编程的时候很多东西都是调用的wsl里头的东西，所以我们安装插件的时候要想在wsl里面也能用，必须要把他安装到wsl里面才能使用，比如下面的语言包：</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//Chinese.jpg" />
+</p>
+
+<p><strong>其实就是用VScode远程连接进行开发，没什么特殊的！</strong></p>
+
+<p>需要注意的是: <font color="red">安装完这个插件以后，当我们在打开文件夹的时候就会有两种提示，一种是打开本地，一种是打开wsl。由于在wsl中电脑磁盘是挂载在`/mnt/`目录下的，所以在打开wsl目录的时候就会有以下的提示：</font></p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//openFolder.jpg" />
+</p>
+
+<p>如果我们点击右边的<code class="highlighter-rouge">show local</code>自然是打开Windows目录下的文件夹，使用起来很方便，如下图：</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/wiki/fslong520/blog//openLocal.jpg" />
+</p>
+
+<p>不过个人还是建议直接一直就在wsl下得了，反正也能直接读写windows10的目录，笔者直接就是在OneDrive当中开发（日常关着的，过几天启动下OneDrive同步一次），这样不影响性能还是同步，还能使用wsl，简直美滋滋。</p>
+
+<p>  <strong>到这里教程就结束了，这个教程很简单，就是教大家怎么使用wsl和vscode配合进行开发，具体能产生什么样的火花还需要你来开发！</strong></p>
 
 <hr />
 
