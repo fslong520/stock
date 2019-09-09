@@ -72,16 +72,19 @@ tags: linux,wsl,Python
 &emsp;&emsp;在开发的过程中我们往往需要运行一些GUI程序，或者自己编写一个GUI程序，比如使用海龟画图，这种情况下就需要GUI相关支持了，其实实现也很简单，用的是x11服务，只要开一个x11服务即可，相关软件很多Xmanager、xming、mobaXterm等都可以，笔者用的是mobaXterm，他对wsl支持很友好。  
 1、安装mobaXterm，官网下载地址是（个人版就可以了）: [https://mobaxterm.mobatek.net/download.html](https://mobaxterm.mobatek.net/download.html)    
 2、将物理机ip地址设为静态ip，然后再mobaXterm里新建一个session，选择wsl，如下图：  
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/newsession.jpg">
 </p>  
 
-3、打开刚刚新建的session，如果显示有一行 ` Your DISPLAY is set to 192.168.2.77:0.0 ` 说明一切正常，这句话里面的ip地址自然是你自己的，如下图：
+3、打开刚刚新建的session，如果显示有一行 ` Your DISPLAY is set to 192.168.2.77:0.0 ` 说明一切正常，这句话里面的ip地址自然是你自己的，如下图：  
+
 <p align="center">
     <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/opensession.jpg">
 </p>   
 
-4、此时还不可以的，我们需要写入环境变量`export DISPLAY="192.168.2.77:0.0"`，里面的ip地址是我的ip地址，你换成你的就是了，然后运行`source ~/.bashrc`使环境变量生效，此时你就可以在vscode的终端里运行任意GUI程序了，python写的gui程序也完全没问题，但前提是mobaXterm不能关（如果没打开刚刚那个wsl的session，mobaXterm会自动开启一个），下图一个是新立德一个是python的海龟库绘图：  
+4、此时还不可以的，我们需要写入环境变量`export DISPLAY="192.168.2.77:0.0"`，里面的ip地址是我的ip地址，你换成你的就是了，然后运行`source ~/.bashrc`使环境变量生效，此时你就可以在vscode的终端里运行任意GUI程序了，python写的gui程序也完全没问题，但前提是mobaXterm不能关（如果没打开刚刚那个wsl的session，mobaXterm会自动开启一个），下图一个是新立德一个是python的海龟库绘图：   
+ 
 <p align="center">
     <img src="https://raw.githubusercontent.com/wiki/fslong520/blog/img/VScodeAndWsl/synaptic.jpg">
 </p>   
