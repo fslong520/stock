@@ -32,9 +32,9 @@ def createImg(inputs=None):
     markdownCode = ''
     for i in imgs:
         htmlCode += '\n<p align="center">\n    <img src="https://raw.githubusercontent.com/'
-        htmlCode += 'wiki/fslong520/blog/img/{}{}">\n</p>'.format(inputs,i)
+        htmlCode += 'wiki/fslong520/blog/img/{}{}">\n</p>'.format(inputs, i)
         markdownCode += '\n<p align="center">  \n![](https://raw.githubusercontent.com/'
-        markdownCode += 'wiki/fslong520/blog/img/{}{})\n</p>'.format(inputs,i)
+        markdownCode += 'wiki/fslong520/blog/img/{}{})\n</p>'.format(inputs, i)
     return ('#' * 80 + '\nhtml代码如下：\n{}'.format(htmlCode) + '\n\n\n' +
             '#' * 80 + '\nmarkdown代码如下：\n{}'.format(markdownCode), len(imgs))
 
